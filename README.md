@@ -1,3 +1,1 @@
-# ds_project
-wichtige Infos
-Noch viel wichtigere informationen !!!!!!!!!!!!!
+# Data Science Project 2026
