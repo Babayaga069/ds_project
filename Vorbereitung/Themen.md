@@ -7,7 +7,7 @@
 - What collaboration networks emerge between actors and directors, and how do recurring collaborations influence movie success?
 - How does the financial and critical success of movie sequels compare to their original films across franchises?
 
-potential aps and datasets:
+potential apis and datasets:
 TMDB API
 
 IMDb datasets
@@ -43,4 +43,30 @@ OMDb → Plot Keywords
 
 
 
-## Thema3
+## Gaming
+
+- How do major content updates affect player engagement and Twitch streaming popularity for competitive multiplayer games such as Fortnite, Apex Legends, CS:GO, etc.
+
+- What is the relationship between critic review scores and player activity levels for triple A titles or other top-rated PC games?
+
+- How does the game genre influence streaming engagement and community growth, regarding the last 10 years?
+
+- How do free-to-play games and pay-to-play games relate to player population size and amount of time played for smaller indie games?
+
+- How do e-Sport tournaments influence the short-term player activity for competitive titles?
+
+- How does the age of a game relate to its long-term player retention and streaming presence?
+
+- How do major game publishers differ in terms of average player counts and engagement across their released titles?
+
+- How do seasonal Steam sales influence short-term increases in player counts and player engagement?
+
+Usable APIs:
+
+RAWG.io API -> usable to get metadata about games over certain time periods
+
+Twitch API -> usable to get popularity and player engagement stats over certain time periods
+
+Steam API -> usable to get diverse statistics about player engagement and player counts over certain time periods
+
+PandaScore API -> usable to get data and metadata about eSport events and announcements and engagement with those over certain time periods
