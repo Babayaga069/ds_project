@@ -1,5 +1,6 @@
-## Filme
+## Themes
 
+### Movies
 - How strongly does production budget predict box office revenue and profitability across different genres and release periods?
 - Which combination of production budget, genre, runtime, cast popularity and release timing best explains financial and rating-based movie success?
 - How have the financial performance and audience ratings of different movie genres evolved over the past 20 years?
@@ -10,21 +11,13 @@
 - Does receiving an Academy Award nomination or win significantly increase a film’s post-announcement box office revenue and profitability?
 - To what extent does pre-release public sentiment (e.g., social media engagement and online search interest) predict the subsequent financial and critical success of movies?
 
-potential apis and datasets:
-TMDB API
-IMDb datasets
-Box Office Mojo
-OMDb API
-Google Trends (für Hype)
-Wikipedia API (Franchise-Zuordnung)
-Wenn ihr z.B. kombiniert:
+#### Usable APIs
 TMDB → Budget, Revenue, Runtime, Genre
 IMDb → Ratings
 OMDb → Plot Keywords
 
-## Socialeconomic
-
-- Is there a statistically significant relationship between residential property prices per square meter and geographic distance to the city center within major German cities?
+### Socialeconomic
+- Is there a statistically significant relationship between residential property prices per square meter and geographic distance to the city center within major German cities? [compairing two cities]
 - Are there significant differences in average later-life income depending on the German federal state in which individuals obtained their secondary school diploma (Abitur)?
 - Is there a significant association between per capita income and average life expectancy across countries?
 - How does average household income correlate with regional divorce rates within Germany?
@@ -34,46 +27,25 @@ OMDb → Plot Keywords
 - To what extent is voting behavior intergenerationally transmitted between parents and their children?
 - To what extent does parental occupation influence the occupational outcomes of their children in adulthood?
 
+#### Usable APIs:
+Eurostat API -> Einkommen, Bildung, Arbeitsmarkt, Urban-Rural, Housing/Prices in EU inkl. Deutschland.
+Destatis GENESIS-Online API (Deutschland) -> Bundesländer/Regionen, Einkommen, Bildung, Demografie
+OECD API (SDMX) -> Life satisfaction / well-being, plus Einkommen & Bildung in vielen Ländern.
 
 
-Eurostat API (SDMX / JSON-stat / CSV)
-
-- Einkommen, Bildung, Arbeitsmarkt, Urban-Rural, Housing/Prices in EU inkl. Deutschland.
-
-Destatis GENESIS-Online API (Deutschland)
-
-- Bundesländer/Regionen, Einkommen, Bildung, Demografie
-
-OECD API (SDMX)
-
-- Life satisfaction / well-being, plus Einkommen & Bildung in vielen Ländern.
-
-
-## Gaming
-
+### Gaming
 - How do major content updates influence player engagement and Twitch streaming popularity in competitive multiplayer games?
-
 - Are there major differences between game genres regarding the influence on streaming engagement and community growth over the past 10 years?
-
 - To what extend do monitazation-models of games relate to player population size and average play time among smaller indie games since 2018?
-
 - How does the age of a game relate to its long-term player retention and streaming presence?
-
 - How do major game publishers differ in terms of average player counts and engagement across their released titles?
-
 - How much do seasonal Steam sales influence short-term increases in player counts, game popularity and player engagement?
-
 - How strongly do genre, platform availability, and publisher reputation predict player engagement and streaming popularity across different release periods?
-
 - In which range do multiplayer-focused games differ from single-player games in converting initial Twitch hype into sustained player retention?
+- What game lifecycle patterns emerge when comparing games based on the launch hype, peak player count and long-term retention duration [ what is lifecycle?]
 
-- What game lifecycle patterns emerge when comparing games based on the launch hype, peak player count and long-term retention duration
 
-
-Usable APIs:
-
+#### Usable APIs:
 Twitch API -> usable to get popularity and player engagement stats over certain time periods
-
 Steam API -> usable to get diverse statistics about player engagement and player counts over certain time periods, especially regarding events and details about 
-
 RAWG.io API -> usable to get additional metadata about games over certain time periods
