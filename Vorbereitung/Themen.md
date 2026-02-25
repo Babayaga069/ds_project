@@ -9,23 +9,14 @@
 
 potential apis and datasets:
 TMDB API
-
 IMDb datasets
-
 Box Office Mojo
-
 OMDb API
-
 Google Trends (für Hype)
-
 Wikipedia API (Franchise-Zuordnung)
-
 Wenn ihr z.B. kombiniert:
-
 TMDB → Budget, Revenue, Runtime, Genre
-
 IMDb → Ratings
-
 OMDb → Plot Keywords
 
 ## Socialshit
