@@ -6,6 +6,9 @@
 - How does the historical success of directors and leading actors influence the financial and critical success of new movie releases?
 - What collaboration networks emerge between actors and directors, and how do recurring collaborations influence movie success?
 - How does the financial and critical success of movie sequels compare to their original films across franchises?
+- Which film characteristics significantly predict the likelihood of receiving Academy Award nominations and wins?
+- Does receiving an Academy Award nomination or win significantly increase a film’s post-announcement box office revenue and profitability?
+- To what extent does pre-release public sentiment (e.g., social media engagement and online search interest) predict the subsequent financial and critical success of movies?
 
 potential apis and datasets:
 TMDB API
@@ -19,7 +22,7 @@ TMDB → Budget, Revenue, Runtime, Genre
 IMDb → Ratings
 OMDb → Plot Keywords
 
-## Socialshit
+## Socialeconomic
 
 - Is there a statistically significant relationship between residential property prices per square meter and geographic distance to the city center within major German cities?
 - Are there significant differences in average later-life income depending on the German federal state in which individuals obtained their secondary school diploma (Abitur)?
@@ -29,9 +32,21 @@ OMDb → Plot Keywords
 - Is there an income threshold beyond which additional increases in income no longer produce significant gains in subjective life satisfaction?
 - What is the relative contribution of average annual sunshine hours and regional income levels to subjective life satisfaction?
 - To what extent is voting behavior intergenerationally transmitted between parents and their children?
-- 
+- To what extent does parental occupation influence the occupational outcomes of their children in adulthood?
 
 
+
+Eurostat API (SDMX / JSON-stat / CSV)
+
+- Einkommen, Bildung, Arbeitsmarkt, Urban-Rural, Housing/Prices in EU inkl. Deutschland.
+
+Destatis GENESIS-Online API (Deutschland)
+
+- Bundesländer/Regionen, Einkommen, Bildung, Demografie
+
+OECD API (SDMX)
+
+- Life satisfaction / well-being, plus Einkommen & Bildung in vielen Ländern.
 
 
 ## Gaming
@@ -51,6 +66,7 @@ OMDb → Plot Keywords
 - How do major game publishers differ in terms of average player counts and engagement across their released titles?
 
 - How do seasonal Steam sales influence short-term increases in player counts and player engagement?
+
 
 Usable APIs:
 
