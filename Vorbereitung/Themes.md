@@ -36,28 +36,28 @@ OMDb → Plot Keywords
 
 ## Gaming
 
-- How do major content updates affect player engagement and Twitch streaming popularity for competitive multiplayer games such as Fortnite, Apex Legends, CS:GO, etc.
+- How do major content updates influence player engagement and Twitch streaming popularity in competitive multiplayer games?
 
-- What is the relationship between critic review scores and player activity levels for triple A titles or other top-rated PC games?
+- Are there major differences between game genres regarding the influence on streaming engagement and community growth over the past 10 years?
 
-- How does the game genre influence streaming engagement and community growth, regarding the last 10 years?
-
-- How do free-to-play games and pay-to-play games relate to player population size and amount of time played for smaller indie games?
-
-- How do e-Sport tournaments influence the short-term player activity for competitive titles?
+- To what extend do monitazation-models of games relate to player population size and average play time among smaller indie games since 2018?
 
 - How does the age of a game relate to its long-term player retention and streaming presence?
 
 - How do major game publishers differ in terms of average player counts and engagement across their released titles?
 
-- How do seasonal Steam sales influence short-term increases in player counts and player engagement?
+- How much do seasonal Steam sales influence short-term increases in player counts, game popularity and player engagement?
+
+- How strongly do genre, platform availability, and publisher reputation predict player engagement and streaming popularity across different release periods?
+
+- In which range do multiplayer-focused games differ from single-player games in converting initial Twitch hype into sustained player retention?
+
+- What game lifecycle patterns emerge when comparing games based on the launch hype, peak player count and long-term retention duration
 
 Usable APIs:
 
-RAWG.io API -> usable to get metadata about games over certain time periods
-
 Twitch API -> usable to get popularity and player engagement stats over certain time periods
 
-Steam API -> usable to get diverse statistics about player engagement and player counts over certain time periods
+Steam API -> usable to get diverse statistics about player engagement and player counts over certain time periods, especially regarding events and details about 
 
-PandaScore API -> usable to get data and metadata about eSport events and announcements and engagement with those over certain time periods
+RAWG.io API -> usable to get additional metadata about games over certain time periods
