@@ -34,15 +34,23 @@ OECD API (SDMX) -> Life satisfaction / well-being, plus Einkommen & Bildung in v
 
 
 ### Gaming
-- How do major content updates influence player engagement and Twitch streaming popularity in competitive multiplayer games?
-- Are there major differences between game genres regarding the influence on streaming engagement and community growth over the past 10 years?
-- To what extend do monitazation-models of games relate to player population size and average play time among smaller indie games since 2018?
+- How do major content updates influence player engagement and Twitch streaming popularity in big competitive multiplayer games, like League of Legends, CS:GO, Apex Legends, Overwatch?
+
+- Are there major differences between popular game genres, regarding the influence on streaming engagement and community growth over the past 10 years?
+
+- To what extend do monitazation-models (Free2Play, Pay2Play, subscription models) of games relate to player population size and average play time among smaller indie games since 2018?
+
 - How does the age of a game relate to its long-term player retention and streaming presence?
-- How do major game publishers differ in terms of average player counts and engagement across their released titles?
+
+- How do major gaming companies, like Tencent, EA, Sony, Activision, Epic Games, Ubisoft, differ in terms of average player counts and engagement across their released titles?
+
 - How much do seasonal Steam sales influence short-term increases in player counts, game popularity and player engagement?
+
 - How strongly do genre, platform availability, and publisher reputation predict player engagement and streaming popularity across different release periods?
+
 - In which range do multiplayer-focused games differ from single-player games in converting initial Twitch hype into sustained player retention?
-- What game lifecycle patterns emerge when comparing games based on the launch hype, peak player count and long-term retention duration [ what is lifecycle?]
+
+- What game lifecycle patterns (from announcement of a game till its long-term player retention or decline) emerge when comparing popular triple-A game titles, like Battlefield, Call of Duty, etc., based on the launch hype, peak player count and long-term retention duration
 
 
 #### Usable APIs:
