@@ -35,26 +35,46 @@ OECD API (SDMX) -> Life satisfaction / well-being, plus Einkommen & Bildung in v
 
 
 ### Gaming
-- How do major content updates influence player engagement and Twitch streaming popularity in big competitive multiplayer games, like League of Legends, CS:GO, Apex Legends, Overwatch?
 
-- Are there major differences between popular game genres, regarding the influence on streaming engagement and community growth over the past 10 years?
+oberen fragen sind die alten, die wegen den api limits nicht funktionieren, die unteren sind die neuen, die auf die limits und moeglichen informationen moeglich sind
+-/// How do major content updates influence player engagement and Twitch streaming popularity in big competitive multiplayer games, like League of Legends, CS:GO, Apex Legends, Overwatch?
 
-- To what extend do monitazation-models (Free2Play, Pay2Play, subscription models) of games relate to player population size and average play time among smaller indie games since 2018?
+-/// Are there major differences between popular game genres, regarding the influence on streaming engagement and community growth over the past 10 years?
 
-- How does the age of a game relate to its long-term player retention and streaming presence?
+-/// To what extend do monitazation-models (Free2Play, Pay2Play, subscription models) of games relate to player engagement and average play time over two weeks among smaller indie games?
 
-- How do major gaming companies, like Tencent, EA, Sony, Activision, Epic Games, Ubisoft, differ in terms of average player counts and engagement across their released titles?
+-/// How does the age of a game relate to its long-term player retention and streaming presence?
 
-- How much do seasonal Steam sales influence short-term increases in player counts, game popularity and player engagement?
+-/// How do major gaming companies, like Tencent, EA, Sony, Activision, Epic Games, Ubisoft, differ in terms of average player counts and engagement across their released titles?
 
-- How strongly do genre, platform availability, and publisher reputation predict player engagement and streaming popularity across different release periods?
+-/// How much do seasonal Steam sales influence short-term increases in player counts, game popularity and player engagement?
 
-- In which range do multiplayer-focused games differ from single-player games in converting initial Twitch hype into sustained player retention?
+-/// How strongly do genre, platform availability, and publisher reputation predict player engagement and streaming popularity across different release periods?
 
-- What game lifecycle patterns (from announcement of a game till its long-term player retention or decline) emerge when comparing popular triple-A game titles, like Battlefield, Call of Duty, etc., based on the launch hype, peak player count and long-term retention duration
+-/// In which range do multiplayer-focused games differ from single-player games in converting initial Twitch hype into sustained player retention?
 
+-/// What game lifecycle patterns (from announcement of a game till its long-term player retention or decline) emerge when comparing popular triple-A game titles, like Battlefield, Call of Duty, etc., based on the launch hype, peak player count and long-term retention duration
+
+
+- Do the top 10 streamed games on Twitch capture a larger share of twitch viewers than of Steam players?
+
+- How does a developer1s average historical review score relate to current player counts of their 3 most popular games?
+
+- How does the number of gameplay tags assigned to major AAA game titles relate to its current Steam player base size and Twitch viewer engagement?
+
+- How does the number of supported platforms relate to current Twitch popularity and Steam player activity for the most popular FPS, like Fortnite, COD, PUBG, etc.?
+
+- How does Steam user review score relate to current Twitch viewer counts for the biggest indie games, like Hades, Satisfactory, Vampire Survivors an Balatro released since 2020?
+
+- How do the major multiplayer-tagged games differ from single-player games in terms of Twitch viewer-to-player ratios?
+
+- How does the ratio of Twitch viewers to Steam players differ across major game genres?
+
+- How does current Twitch viewership relate to current Steam concurrent player counts across the 5 most popular PC games?
+
+- How does the price of MMO games relate to it's current Twitch engagement and player activity?
 
 #### Usable APIs:
-Twitch API -> usable to get popularity and player engagement stats over certain time periods
-Steam API -> usable to get diverse statistics about player engagement and player counts over certain time periods, especially regarding events and details about 
-RAWG.io API -> usable to get additional metadata about games over certain time periods
+Twitch API -> usable to get popularity and current player engagement stats
+Steam API -> usable to get diverse statistics about current player engagement and player counts 
+RAWG.io API -> usable to get additional metadata about games
