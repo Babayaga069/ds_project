@@ -10,6 +10,7 @@
 - Which film characteristics significantly predict the likelihood of receiving Academy Award nominations and wins?
 - Does receiving an Academy Award nomination or win significantly increase a film’s post-announcement box office revenue and profitability?
 - To what extent does pre-release public sentiment (e.g., social media engagement and online search interest) predict the subsequent financial and critical success of movies?
+- Does sticking to typical genre plots lead to greater box office success, or do audiences reward films that subvert these expectations?
 
 #### Usable APIs
 TMDB → Budget, Revenue, Runtime, Genre
