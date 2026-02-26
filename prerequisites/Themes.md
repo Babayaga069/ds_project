@@ -36,43 +36,23 @@ OECD API (SDMX) -> Life satisfaction / well-being, plus Einkommen & Bildung in v
 
 ### Gaming
 
-oberen fragen sind die alten, die wegen den api limits nicht funktionieren, die unteren sind die neuen, die auf die limits und moeglichen informationen moeglich sind
--/// How do major content updates influence player engagement and Twitch streaming popularity in big competitive multiplayer games, like League of Legends, CS:GO, Apex Legends, Overwatch?
+- Do the top 5 streamed games on Twitch capture a larger share of twitch viewers than of Steam players for the same games at the same time?
 
--/// Are there major differences between popular game genres, regarding the influence on streaming engagement and community growth over the past 10 years?
+- How do the biggest gaming developers, like EA, Sony, Activision, Epic Games and Ubisoft average historical review score relate to current player counts regarding their 3 most popular games?
 
--/// To what extend do monitazation-models (Free2Play, Pay2Play, subscription models) of games relate to player engagement and average play time over two weeks among smaller indie games?
-
--/// How does the age of a game relate to its long-term player retention and streaming presence?
-
--/// How do major gaming companies, like Tencent, EA, Sony, Activision, Epic Games, Ubisoft, differ in terms of average player counts and engagement across their released titles?
-
--/// How much do seasonal Steam sales influence short-term increases in player counts, game popularity and player engagement?
-
--/// How strongly do genre, platform availability, and publisher reputation predict player engagement and streaming popularity across different release periods?
-
--/// In which range do multiplayer-focused games differ from single-player games in converting initial Twitch hype into sustained player retention?
-
--/// What game lifecycle patterns (from announcement of a game till its long-term player retention or decline) emerge when comparing popular triple-A game titles, like Battlefield, Call of Duty, etc., based on the launch hype, peak player count and long-term retention duration
-
-
-- Do the top 10 streamed games on Twitch capture a larger share of twitch viewers than of Steam players?
-
-- How does a developer1s average historical review score relate to current player counts of their 3 most popular games?
-
-- How does the number of gameplay tags assigned to major AAA game titles relate to its current Steam player base size and Twitch viewer engagement?
+- How does the number of gameplay tags assigned to major AAA game titles, like RDR2, BioShock Infinite, The Last of Us, Uncharted 4 and Dragon Age: Inquisition relate to its current Steam player base size and Twitch viewer engagement?
 
 - How does the number of supported platforms relate to current Twitch popularity and Steam player activity for the most popular FPS, like Fortnite, COD, PUBG, etc.?
 
 - How does Steam user review score relate to current Twitch viewer counts for the biggest indie games, like Hades, Satisfactory, Vampire Survivors an Balatro released since 2020?
 
-- How do the major multiplayer-tagged games differ from single-player games in terms of Twitch viewer-to-player ratios?
+- How do the current 3 largest multiplayer-tagged games (CS 2, Dota 2, ARC Raiders) differ from the 3 largest single-player games (Bongo Cat, GTA V, Geometry Dash) in terms of Twitch viewer-to-player ratios?
 
-- How does the ratio of Twitch viewers to Steam players differ across major game genres?
+- How does the ratio of Twitch viewers to Steam players differ across the 5 most dominant game genres (Action, RPG, Strategy, Simulation & Management, Open-Word Survival)?
 
-- How does current Twitch viewership relate to current Steam concurrent player counts across the 5 most popular PC games?
+- How does current Twitch viewership relate to current Steam concurrent player counts across the 5 most popular Steam PC games?
 
-- How does the price of MMO games relate to it's current Twitch engagement and player activity?
+- How does the amount of DLCs for some of the biggest Simulation games (The Sims 4, Cities: Skylines, Famring Simulator 2025) relate to it's current Twitch engagement and player activity?
 
 #### Usable APIs:
 Twitch API -> usable to get popularity and current player engagement stats
