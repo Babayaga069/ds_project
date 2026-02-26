@@ -55,6 +55,6 @@ OECD API (SDMX) -> Life satisfaction / well-being, plus Einkommen & Bildung in v
 - How does the amount of DLCs for some of the biggest Simulation games (The Sims 4, Cities: Skylines, Farming Simulator 2025) relate to it's current Twitch engagement and player activity?
 
 #### Usable APIs:
-Twitch API -> usable to get popularity and current player engagement stats
-Steam API -> usable to get diverse statistics about current player engagement and player counts 
+Twitch Helix API -> usable to get popularity and current player engagement stats
+Steam Web API -> usable to get diverse statistics about current player engagement and player counts 
 RAWG.io API -> usable to get additional metadata about games
