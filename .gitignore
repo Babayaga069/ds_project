@@ -1,11 +1,6 @@
 .DS_Store
 .ipynb_checkpoints/
+.env
 
 
-## API's
-### TMDB API
-API Key
-    87caa5afeeb425e5eb29e3c0d5242e10
-API Read Access Token 
-    eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4N2NhYTVhZmVlYjQyNWU1ZWIyOWUzYzBkNTI0MmUxMCIsIm5iZiI6MTc3MjQ1MDY0NC45MzEsInN1YiI6IjY5YTU3MzU0MTdlZTlkYjhjODE4N2Y1MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.v6InKhP0vwMoPV9mFoNSMiiEfsy1CBVNlPppSkBnVA8
 
