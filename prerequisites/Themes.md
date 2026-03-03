@@ -16,7 +16,6 @@
 - (8. Does receiving an Academy Award nomination or win significantly increase a film’s post-announcement box office revenue and profitability?)
 - (9. To what extent does pre-release public sentiment (e.g., social media engagement and online search interest) predict the subsequent financial and critical success of movies?)
 - 10. Does sticking to typical genre plots lead to greater box office success, or do audiences reward films that subvert these expectations?
-- 
 
 #### Usable APIs
 TMDB → Budget, Revenue, Runtime, Genre
