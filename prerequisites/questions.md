@@ -23,11 +23,10 @@
 - 6. How does the financial and critical success of movie sequels compare to their original films across franchises?
 
 #### Tom
-- 7. Which film characteristics significantly predict the likelihood of receiving Academy Award nominations and wins?
-    - Instead of characteristics other specification
+- 7. How does film genre, along with production budget, influence the likelihood of receiving an Academy Award nomination or win?
 
 #### Tom
-- 8. Is there a correlation between receiving an Acadey Award nomination and an increase in a film's post-announcement box office revenue and profitability?
+- 8. How does receiving an Academy Award nomination or win influence a film’s box office revenue and profitability after the announcement?
 
 #### Karl
 - 9. To what extent does pre-release public sentiment (e.g., social media engagement and online search interest) predict the subsequent financial and critical success of movies?
