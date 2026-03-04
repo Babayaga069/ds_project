@@ -1,0 +1,511 @@
+id,title,rating,release_date,original_language,IMDb_ID,tmdb_id,runtime,revenue,budget
+1,Our War Game,8.0,2000-03-04,,tt0313441,75571,41,22800000,0
+2,Doraemon: Nobita and the Legend of the Sun King,7.0,2000-03-04,,tt1147513,31352,93,31300000,0
+3,One Piece: The Movie,7.049,2000-03-04,,tt0814243,19576,51,0,0
+4,Detective Conan: Captured in Her Eyes,7.4,2000-04-22,,tt1068773,20677,100,23211413,0
+5,Devilman - Volume 3: Devilman Apocalypse,6.792,2000-05-24,,tt0407521,62182,45,0,0
+6,Mezzo Forte,6.483,2000-05-25,,tt0427531,55892,55,0,0
+7,Escaflowne: The Movie,6.7,2000-06-24,,tt0270933,16990,98,0,0
+8,Pokémon 3: The Movie,6.5,2000-07-08,,tt0235679,10991,93,68452128,16000000
+9,Leave it to Kero!,8.485,2000-07-15,,tt1263791,322686,10,0,0
+10,Cardcaptor Sakura: The Sealed Card,8.099,2000-07-15,,tt0301083,31347,80,0,0
+11,Blood: The Last Vampire,6.853,2000-11-18,,tt0275230,919,48,0,0
+12,Initial D: Third Stage,6.85,2001-01-13,,tt0388130,80741,104,0,0
+13,Street Fighter Alpha: The Movie,6.4,2001-01-30,,tt0185708,17433,100,0,0
+14,Cat Soup,7.067,2001-02-21,,tt0385586,25078,33,0,0
+15,Digimon Adventure 02: Revenge of Diaboromon,6.9,2001-03-03,,tt0804905,36201,30,27853696,0
+16,One Piece: Clockwork Island Adventure,6.893,2001-03-03,,tt0832449,23446,60,0,0
+17,Crayon Shin-chan: The Adult Empire Strikes Back,8.2,2001-04-21,,tt0831848,37280,90,10392896,0
+18,Case Closed: Countdown to Heaven,7.346,2001-04-21,,tt1073223,32022,100,23895574,0
+19,Vampire Hunter D: Bloodlust,7.658,2001-04-21,,tt0216651,15999,103,151086,0
+20,Metropolis,7.155,2001-05-26,,tt0293416,9606,107,4035384,15000000
+21,Pokémon 4Ever,6.5,2001-07-06,,tt0287635,12600,80,40807089,0
+22,Spirited Away,8.534,2001-07-20,,tt0245429,129,125,274925095,19000000
+23,Pokémon: Mewtwo Returns,6.7,2001-08-17,,tt0304564,36897,63,0,0
+24,Cowboy Bebop: The Movie,7.724,2001-09-01,,tt0275277,11299,115,0,0
+25,Inuyasha the Movie: Affections Touching Across Time,7.5,2001-12-15,,tt0322645,42360,99,10539779,0
+26,Voices of a Distant Star,6.5,2002-02-02,,tt0370754,37910,25,0,0
+27,One Piece: Chopper's Kingdom on the Island of Strange Animals,6.732,2002-03-02,,tt0997084,44725,56,13107237,0
+28,Armitage: Dual Matrix,6.3,2002-03-22,,tt0303678,21769,90,0,0
+29,Lupin the Third: Return of Pycal,6.1,2002-04-03,,tt0420138,33176,49,0,0
+30,Detective Conan: The Phantom of Baker Street,7.76,2002-04-20,,tt0990372,26662,107,24387667,0
+31,Pokémon Heroes,6.7,2002-07-13,,tt0347791,33875,80,27756381,0
+32,The Cat Returns,7.133,2002-07-19,,tt0347618,15370,75,54016370,0
+33,Millennium Actress,7.844,2002-09-14,,tt0291350,33320,87,37641,0
+34,Mei and the Kittenbus,7.2,2002-10-01,,tt0803038,158483,13,0,0
+35,Mount Head,6.36,2002-10-04,,tt0351382,36072,10,0,0
+36,Inuyasha the Movie 2: The Castle Beyond the Looking Glass,7.7,2002-12-22,,tt0366621,22537,100,7506630,0
+37,One Piece: Dead End Adventure,6.986,2003-03-01,,tt1006926,44727,95,14817006,0
+38,Doraemon: Nobita and the Windmasters,7.241,2003-03-08,,tt0473474,98613,84,24700000,0
+39,Detective Conan: Crossroad in the Ancient Capital,7.113,2003-04-19,,tt1133935,39202,110,24342320,0
+40,Fighting Spirit: Champion Road,6.8,2003-06-25,,tt0805540,45287,90,0,0
+41,Pokémon: Jirachi - Wish Maker,6.6,2003-07-19,,tt0420076,36218,81,34173059,0
+42,Lupin the Third: Operation: Return the Treasure,6.8,2003-08-01,,tt0834585,80868,90,0,0
+43,Fighting Spirit - Mashiba vs. Kimura,6.9,2003-09-05,,tt3354378,45288,60,0,0
+44,Tokyo Godfathers,7.922,2003-12-05,,tt0388473,13398,92,607735,0
+45,Naruto: The Lost Story - Mission: Protect the Waterfall Village!,7.189,2003-12-20,,tt3634858,410685,40,0,0
+46,Inuyasha the Movie 3: Swords of an Honorable Ruler,7.7,2003-12-20,,tt0396659,34295,99,6654841,0
+47,Dead Leaves,6.996,2004-01-17,,tt0439533,15981,52,0,0
+48,Saint Seiya Heaven Chapter: Overture,7.7,2004-02-14,,tt0805605,50253,83,0,0
+49,One Piece: Curse of the Sacred Sword,6.867,2004-03-06,,tt1010435,44728,95,13422333,0
+50,Ghost in the Shell 2: Innocence,7.334,2004-03-06,,tt0347246,12140,100,10079829,0
+51,Detective Conan: Magician of the Silver Sky,7.054,2004-04-17,,tt1133559,39203,110,22618511,0
+52,Appleseed,6.692,2004-04-17,,tt0401233,11633,105,1461989,10000000
+53,Zatch Bell! 101st Devil,6.5,2004-07-09,,tt4135650,404250,84,0,0
+54,Steamboy,6.906,2004-07-17,,tt0348121,8953,126,18900000,26000000
+55,Pokémon: Destiny Deoxys,6.609,2004-07-22,,tt0435286,34065,98,34337258,0
+56,Mind Game,7.46,2004-08-07,,tt0452039,21712,103,36613,0
+57,Naruto the Movie: Ninja Clash in the Land of Snow,7.299,2004-08-21,,tt0476680,16907,82,11141307,0
+58,Howl's Moving Castle,8.387,2004-09-09,,tt0347149,4935,119,236049757,24000000
+59,The Place Promised in Our Early Days,6.6,2004-11-20,,tt0381348,12924,90,44483,0
+60,Inuyasha the Movie 4: Fire on the Mystic Island,7.5,2004-12-23,,tt0473658,34297,88,6115310,0
+61,One Piece: Baron Omatsuri and the Secret Island,7.2,2005-03-05,,tt1018764,44729,91,10494545,0
+62,Detective Conan: Strategy Above the Depths,6.903,2005-04-09,,tt1133936,39204,110,20768817,0
+63,Final Fantasy VII: Advent Children,7.16,2005-07-14,,tt0385700,647,101,0,0
+64,Pokémon: Lucario and the Mystery of Mew,6.998,2005-07-16,,tt0875609,34067,103,37228626,0
+65,Fullmetal Alchemist the Movie: Conqueror of Shamballa,7.288,2005-07-21,,tt0485323,14003,105,10197984,0
+66,Naruto the Movie: Legend of the Stone of Gelel,6.795,2005-08-06,,tt0791188,16910,97,10198805,0
+67,Final Fantasy VII: Last Order,6.553,2005-09-14,,tt0489134,13274,25,0,0
+68,Pale Cocoon,6.515,2005-10-29,,tt1506448,20683,23,0,0
+69,Stormy Night,7.1,2005-12-10,,tt0498465,19961,107,16517526,0
+70,Origin: Spirits of the Past,6.928,2006-01-07,,tt0493247,14945,95,0,0
+71,Ghost in the Shell: S.A.C. 2nd GIG - Individual Eleven,7.545,2006-01-27,,tt1024214,111224,161,0,0
+72,Doraemon: Nobita's Dinosaur,7.5,2006-03-04,,tt0802983,70841,107,34740192,0
+73,One Piece: Giant Mecha Soldier of Karakuri Castle,6.959,2006-03-04,,tt1059950,44730,94,7232965,0
+74,Fist of the North Star: The Legend of the True Savior: Legend of Raoh-Chapter of Death in Love,6.667,2006-03-11,,tt0456980,109080,95,2448408,0
+75,Detective Conan: The Private Eyes' Requiem,7.099,2006-04-15,,tt0498536,39205,110,26251232,0
+76,Pokémon: The Mastermind of Mirage Pokémon,6.8,2006-04-29,,tt1371721,137773,45,0,0
+77,Brave Story,6.257,2006-05-22,,tt0778631,17566,112,0,0
+78,Pokémon Ranger and the Temple of the Sea,6.4,2006-07-15,,tt1000095,16808,105,27638625,0
+79,The Girl Who Leapt Through Time,7.8,2006-07-15,,tt0808506,14069,98,3478290,0
+80,Tales from Earthsea,6.529,2006-07-29,,tt0495596,37933,115,68625104,22000000
+81,Naruto the Movie: Guardians of the Crescent Moon Kingdom,7.123,2006-08-05,,tt1071815,18861,95,3200000,0
+82,Paprika,7.811,2006-10-01,,tt0851578,4977,90,946590,2600000
+83,Tekkonkinkreet,7.361,2006-10-21,,tt0831888,13754,103,0,4200000
+84,Animal Crossing: The Movie,6.766,2006-12-16,,tt1190545,20523,87,16200000,0
+85,Bleach the Movie: Memories of Nobody,6.921,2006-12-16,,tt1105263,15575,87,1238072,0
+86,5 Centimeters per Second,7.296,2007-03-03,,tt0983213,38142,63,548192,5000000
+87,One Piece: The Desert Princess and the Pirates: Adventure in Alabasta,6.896,2007-03-03,,tt1037116,25278,90,7090891,0
+88,Doraemon: Nobita's New Great Adventure Into the Underworld - The Seven Magic Users,7.2,2007-03-10,,tt1260351,52795,112,32787846,0
+89,Detective Conan: Jolly Roger in the Deep Azure,6.497,2007-04-21,,tt1146290,39206,110,22053994,0
+90,Fist of the North Star: Legend of Raoh - Chapter of Fierce Fighting,6.488,2007-04-28,,tt1135522,114372,95,0,0
+91,Highlander: The Search for Vengeance,7.129,2007-06-05,,tt0465657,13194,86,0,0
+92,Genius Party,6.474,2007-07-07,,tt0962762,40123,102,0,0
+93,Pokémon: The Rise of Darkrai,6.9,2007-07-14,,tt1226251,25961,95,42496749,0
+94,The Piano Forest,7.038,2007-07-21,,tt1119194,59298,101,2014665,0
+95,Summer Days with Coo,7.826,2007-07-28,,tt1179773,17234,138,0,0
+96,Naruto Shippuden the Movie,7.408,2007-08-04,,tt0988982,20982,94,13219807,0
+97,Vexille,6.678,2007-08-18,,tt0970472,13391,109,0,0
+98,Death Note Relight 1: Visions of a God,7.907,2007-08-31,,tt3355694,51482,131,0,0
+99,Ghost in the Shell: Stand Alone Complex - Solid State Society,7.5,2007-09-01,,tt0856797,18874,105,0,3200000
+100,Evangelion: 1.0 You Are (Not) Alone,7.6,2007-09-01,,tt0923811,15137,101,20121073,7000000
+101,Clannad: The Motion Picture,7.2,2007-09-15,,tt0997274,16516,94,0,0
+102,Sword of the Stranger,7.558,2007-09-29,,tt1121794,13980,103,0,0
+103,Appleseed: Ex Machina,6.5,2007-10-19,,tt1043842,13981,105,0,0
+104,Franz Kafka's a Country Doctor,6.684,2007-11-17,,tt1118665,73714,21,0,0
+105,The Garden of Sinners: Overlooking View,6.729,2007-12-01,,tt1155650,23150,50,0,0
+106,Bleach the Movie: The DiamondDust Rebellion,6.765,2007-12-22,,tt1148261,17101,95,6916899,0
+107,The Garden of Sinners: Murder Speculation Part A,6.711,2007-12-29,,tt1155651,23151,60,0,0
+108,The Garden of Sinners: Remaining Sense of Pain,7.0,2008-02-09,,tt1155652,23153,58,0,0
+109,Resident Evil: Degeneration,6.8,2008-02-13,,tt1174954,13648,97,403117,0
+110,"One Piece: Episode of Chopper Plus: Bloom in the Winter, Miracle Cherry Blossom",7.053,2008-03-01,,tt1206326,44731,113,8654110,0
+111,Kite Liberator,5.234,2008-03-21,,tt1217043,44885,58,0,0
+112,Lupin the Third: Green vs Red,6.4,2008-04-02,,tt1174735,26546,80,0,0
+113,Detective Conan: Full Score of Fear,6.907,2008-04-19,,tt1155696,39207,115,23760176,0
+114,The Garden of Sinners: The Hollow Shrine,6.851,2008-05-24,,tt1233474,23154,45,0,0
+115,La Maison en Petits Cubes,7.906,2008-06-10,,tt1361566,20722,12,0,0
+116,Ghost in the Shell 2.0,7.4,2008-07-12,,tt1260502,14092,85,0,0
+117,Pokémon: Giratina and the Sky Warrior,6.8,2008-07-19,,tt1160525,47292,100,47511422,0
+118,Ponyo,7.758,2008-07-19,,tt0876563,12429,100,202404009,34000000
+119,Naruto Shippuden the Movie: Bonds,7.335,2008-08-02,,tt1160524,17581,90,10642859,0
+120,The Sky Crawlers,6.7,2008-08-02,,tt1056437,15877,121,0,0
+121,The Garden of Sinners: Paradox Spiral,7.631,2008-08-16,,tt1278060,23155,114,0,0
+122,Gurren Lagann The Movie: Childhood's End,7.6,2008-09-06,,tt1288461,20986,112,957621,0
+123,Dragon Ball: Yo! Son Goku and His Friends Return!!,6.5,2008-09-21,,tt1317478,38594,35,0,0
+124,Genius Party Beyond,6.3,2008-10-11,,tt1305678,77248,81,0,0
+125,Bleach the Movie: Fade to Black,7.111,2008-12-13,,tt1339302,17165,94,6032296,0
+126,The Garden of Sinners: Oblivion Recording,6.733,2008-12-20,,tt1343089,23166,59,0,0
+127,Lupin the Third vs. Detective Conan,6.9,2009-03-27,,tt1397219,46033,104,0,0
+128,Detective Conan: The Raven Chaser,7.258,2009-04-18,,tt1343046,28764,111,39664359,0
+129,Gurren Lagann the Movie: The Lights in the Sky Are Stars,7.9,2009-04-25,,tt1422651,23452,126,0,0
+130,Evangelion: 2.0 You Can (Not) Advance,7.8,2009-06-26,,tt0860906,22843,112,44339362,10000000
+131,Pokémon: Arceus and the Jewel of Life,7.078,2009-07-18,,tt1468843,39057,95,52119081,0
+132,Naruto Shippuden the Movie: The Will of Fire,7.384,2009-08-01,,tt1481363,36728,95,8100000,0
+133,Summer Wars,7.454,2009-08-01,,tt1474276,28874,114,18434328,0
+134,The Garden of Sinners: Murder Speculation Part B,7.206,2009-08-08,,tt1345776,23167,120,0,0
+135,Redline,7.5,2009-08-14,,tt1483797,71883,102,0,0
+136,Cencoroll,6.2,2009-08-22,,tt1492151,37928,27,0,0
+137,Death Note Relight 2: L's Successors,7.355,2009-10-07,,tt3355698,68555,100,0,0
+138,Mai Mai Miracle,6.977,2009-11-21,,tt1517216,64809,94,0,0
+139,Eden of the East Movie I: The King of Eden,6.8,2009-11-28,,tt1460738,35435,82,0,0
+140,Professor Layton and the Eternal Diva,7.5,2009-12-01,,tt1488591,41066,99,0,0
+141,One Piece Film: Strong World,7.428,2009-12-12,,tt1485763,41498,114,53000000,0
+142,Naruto OVA 6: The Cross Roads,6.6,2009-12-19,,tt6163076,699249,25,0,0
+143,Yu-Gi-Oh!: Bonds Beyond Time,6.5,2010-01-23,,tt1587157,72013,50,3156482,0
+144,Fate/stay night: Unlimited Blade Works,6.8,2010-01-23,,tt1587156,46304,107,3205829,0
+145,The Disappearance of Haruhi Suzumiya,7.833,2010-02-05,,tt1572781,36865,162,7701498,2000000
+146,Welcome to the Space Show,6.5,2010-02-18,,tt1679681,61591,136,0,0
+147,Time of EVE: The Movie,7.124,2010-03-06,,tt1715210,234284,106,0,0
+148,Doraemon: Nobita's Great Battle of the Mermaid King,6.9,2010-03-06,,tt1613031,86184,100,34702573,0
+149,Eden of the East Movie II: Paradise Lost,6.8,2010-03-13,,tt1468321,44734,93,0,0
+150,Crayon Shin-chan: Super-Dimension! The Storm Called My Bride,7.7,2010-04-17,,tt1623674,117352,99,12876220,0
+151,Detective Conan: The Lost Ship in the Sky,7.082,2010-04-17,,tt1636815,97375,103,36407407,0
+152,One Piece: Strong World Episode 0,7.244,2010-04-24,,tt7947592,270413,19,0,0
+153,Gintama: The Movie,7.423,2010-04-24,,tt1636780,71172,95,10453259,0
+154,Trigun: Badlands Rumble,7.473,2010-04-24,,tt1703049,51859,91,193458,0
+155,King of Thorn,6.597,2010-05-01,,tt1690483,50388,109,0,0
+156,Pokémon: Zoroark - Master of Illusions,6.7,2010-07-10,,tt1690470,50087,96,71143529,0
+157,The Secret World of Arrietty,7.667,2010-07-16,,tt1568921,51739,94,149660003,23000000
+158,Cat Shit One,5.837,2010-07-17,,tt2368669,62368,22,0,0
+159,"Naruto OVA 7: Naruto, the Genie, and the Three Wishes, Believe It!",7.4,2010-07-31,,tt6163022,609197,14,0,0
+160,Naruto Shippuden the Movie: The Lost Tower,7.178,2010-07-31,,tt1703048,50723,85,16537336,0
+161,Colorful,7.204,2010-08-21,,tt1677561,64246,127,0,0
+162,Heart and Yummie,8.026,2010-10-16,,tt1734113,89825,89,0,0
+163,Mardock Scramble: The First Compression,6.82,2010-11-06,,tt1754177,73529,69,0,0
+164,Dragon Ball Z: Plan to Eradicate the Super Saiyans,7.2,2010-11-11,,tt4008518,89636,30,0,0
+165,Bleach the Movie: Hell Verse,7.548,2010-12-04,,tt1785394,73245,94,8749681,0
+166,"Inazuma Eleven the Movie: The Ultimate Force, Team Ogre, Attacks!",7.6,2010-12-23,,tt1794796,118301,90,7243674,0
+167,The Garden of Sinners: Epilogue,6.39,2010-12-28,,tt3868344,47747,33,0,0
+168,Naruto OVA 8: Naruto x UT,7.48,2011-01-01,,tt6163032,698940,6,0,0
+169,Doraemon: Nobita and the New Steel Troops: Winged Angels,7.3,2011-03-05,,tt1851909,137227,108,0,0
+170,One Piece 3D: Straw Hat Chase,6.732,2011-03-19,,tt1865467,79082,30,0,0
+171,Detective Conan: Quarter of Silence,7.074,2011-04-16,,tt1840372,77617,109,42808575,0
+172,High School of the Dead: Drifters of the Dead,7.442,2011-04-25,,tt5799076,203101,18,0,0
+173,Legend of the Millennium Dragon,6.008,2011-04-29,,tt1849027,74842,98,0,0
+174,Children Who Chase Lost Voices,7.2,2011-05-07,,tt1839494,79707,116,0,0
+175,Buddha: The Great Departure,7.465,2011-05-28,,tt1686865,115969,111,0,0
+176,Heaven's Lost Property the Movie: The Angeloid of Clockwork,7.0,2011-06-25,,tt1974262,95170,97,0,0
+177,Fullmetal Alchemist: The Sacred Star of Milos,6.8,2011-07-02,,tt1776196,80518,110,7621364,0
+178,Pokémon the Movie: Black - Victini and Reshiram,6.588,2011-07-16,,tt1961324,115223,88,28550000,0
+179,Pokémon the Movie: White - Victini and Zekrom,6.5,2011-07-16,,tt1739212,88557,97,28550000,0
+180,From Up on Poppy Hill,7.529,2011-07-16,,tt1798188,83389,91,61037844,22000000
+181,TEKKEN: Blood Vengeance,6.76,2011-07-26,,tt2005363,79516,100,0,0
+182,Naruto OVA 9: Chunin Exam on Fire! and Naruto vs. Konohamaru!,7.3,2011-07-30,,tt6163050,189349,14,0,0
+183,Naruto Shippuden the Movie: Blood Prison,7.253,2011-07-30,,tt1999167,75624,108,9065101,0
+184,Mardock Scramble: The Second Combustion,6.353,2011-09-03,,tt2048804,73530,64,0,0
+185,Hotarubi no Mori e,8.254,2011-09-17,,tt2061702,92321,45,0,0
+186,The Princess and the Pilot,7.801,2011-10-01,,tt2113091,93013,99,0,0
+187,K-ON! The Movie,7.907,2011-12-03,,tt1909796,120811,110,21434003,0
+188,Dragon Ball: Episode of Bardock,7.038,2011-12-17,,tt2980736,120475,20,0,0
+189,Berserk: The Golden Age Arc I - The Egg of the King,7.2,2012-02-04,,tt2210479,113082,76,2152610,0
+190,Gyo: Tokyo Fish Attack,5.356,2012-02-15,,tt1857718,94684,70,0,0
+191,Naruto OVA 10: Uchiha Madara vs Senju Hashirama,6.5,2012-02-23,,tt5235126,699254,10,0,0
+192,Doraemon: Nobita and the Island of Miracles – Animal Adventure,6.8,2012-03-03,,tt2271315,160642,100,46180706,0
+193,Detective Conan: The Eleventh Striker,6.846,2012-04-14,,tt2131586,122583,110,44369456,0
+194,A Letter to Momo,7.329,2012-04-21,,tt1853614,100271,120,6748888,0
+195,Blood-C: The Last Dark,7.1,2012-06-02,,tt1941466,171823,106,0,0
+196,See Me After Class,7.226,2012-06-23,,tt3124800,288737,25,0,0
+197,Berserk: The Golden Age Arc II - The Battle for Doldrey,7.3,2012-06-23,,tt2358911,118412,98,0,0
+198,Pokémon the Movie: Kyurem vs. the Sword of Justice,6.331,2012-07-13,,tt2549540,150213,72,44057737,0
+199,Wolf Children,8.2,2012-07-21,,tt2140203,110420,117,55262158,0
+200,Road to Ninja: Naruto the Movie,7.36,2012-07-28,,tt2290828,118406,109,17876559,0
+201,Code Geass: Akito the Exiled 1: The Wyvern Arrives,6.197,2012-08-04,,tt3354096,185526,51,447630,0
+202,Fairy Tail: Phoenix Priestess,7.251,2012-08-18,,tt2085795,135531,86,911467,0
+203,One Piece Episode of Nami: Tears of a Navigator and the Bonds of Friends,6.89,2012-08-25,,tt2598466,215180,105,0,0
+204,Resident Evil: Damnation,6.9,2012-09-25,,tt1753496,133121,100,2325035,0
+205,Asura,7.2,2012-09-29,,tt2328505,181656,76,0,0
+206,Mardock Scramble: The Third Exhaust,6.593,2012-09-29,,tt2423504,122662,68,0,0
+207,Puella Magi Madoka Magica the Movie Part I: Beginnings,7.5,2012-10-05,,tt2205948,152042,131,5816330,0
+208,Puella Magi Madoka Magica the Movie Part II: Eternal,7.5,2012-10-13,,tt2194724,152044,109,5300000,0
+209,009 Re:Cyborg,7.005,2012-10-27,,tt2078523,127544,103,0,0
+210,Evangelion: 3.0 You Can (Not) Redo,7.195,2012-11-17,,tt0860907,75629,96,67282623,13000000
+211,One Piece Film: Z,7.493,2012-12-15,,tt2375379,176983,108,74223861,0
+212,One Piece: Episode of Luffy - Hand Island Adventure,6.713,2012-12-15,,tt3354344,172329,102,0,0
+213,Blue Exorcist: The Movie,7.246,2012-12-28,,tt3028018,201223,88,5994921,0
+214,Hunter x Hunter: Phantom Rouge,7.038,2013-01-12,,tt2918988,211755,97,12705094,0
+215,Berserk: The Golden Age Arc III - The Advent,7.641,2013-02-01,,tt2358913,144288,110,399445,0
+216,Someone's Gaze,7.078,2013-02-08,,tt3300814,222715,7,0,0
+217,A Certain Magical Index: The Miracle of Endymion,6.986,2013-02-23,,tt3163844,219250,90,4701051,0
+218,Death Billiards,7.269,2013-03-01,,tt2807626,186919,25,0,0
+219,Little Witch Academia,7.151,2013-03-02,,tt2704454,182131,26,0,480000
+220,Dragon Ball Z: Battle of Gods,6.8,2013-03-30,,tt2263944,126963,85,50461371,0
+221,Detective Conan: Private Eye in the Distant Sea,6.608,2013-04-19,,tt3303446,228805,110,36324232,0
+222,Steins;Gate: The Movie - Load Region of Déjà Vu,7.578,2013-04-20,,tt2967286,225745,90,4843719,0
+223,Iron Man: Rise of Technovore,6.136,2013-04-24,,tt2654124,169934,88,0,0
+224,Kick-Heart,5.982,2013-05-01,,tt2753048,165718,13,0,201164
+225,Saint☆Young Men,7.693,2013-05-09,,tt2431934,184608,90,0,0
+226,The Garden of Words,7.579,2013-05-31,,tt2591814,198375,46,820165,0
+227,Hal,7.017,2013-06-08,,tt2573198,196761,60,0,0
+228,Ghost in the Shell: Arise - Border 1: Ghost Pain,7.035,2013-06-22,,tt2636124,196750,58,0,0
+229,Gintama: The Final Chapter - Be Forever Yorozuya,7.957,2013-07-04,,tt2374144,245917,110,15954700,0
+230,Pokémon the Movie: Genesect and the Legend Awakened,6.3,2013-07-13,,tt3257582,227679,96,32293377,0
+231,Short Peace,6.432,2013-07-20,,tt3392330,252520,68,22862,0
+232,The Wind Rises,7.793,2013-07-20,,tt2013293,149870,126,117932401,30000000
+233,anohana: The Flower We Saw That Day - The Movie,7.5,2013-08-31,,tt2323836,255413,99,109630,0
+234,Space Pirate Captain Harlock,6.611,2013-09-07,,tt2668134,192577,115,18010317,30000000
+235,"Love, Chunibyo & Other Delusions! Rikka Version",7.2,2013-09-14,,tt3203996,214553,97,0,0
+236,Code Geass: Akito the Exiled 2: The Wyvern Divided,6.23,2013-09-14,,tt3354254,212161,60,0,0
+237,The Garden of Sinners: Future Gospel,7.3,2013-09-28,,tt2983564,212156,89,1713850,0
+238,Naruto OVA 11: Sunny Side Battle,7.634,2013-10-06,,tt6163054,698916,11,0,0
+239,Puella Magi Madoka Magica the Movie Part III: Rebellion,7.723,2013-10-26,,tt2457282,212162,117,12947880,0
+240,Patema Inverted,7.369,2013-11-09,,tt2981768,212167,98,0,0
+241,Bayonetta: Bloody Fate,6.85,2013-11-23,,tt3306776,242546,91,0,0
+242,Persona 3 the Movie: #1 Spring of Birth,7.2,2013-11-23,,tt3198652,212153,98,1956267,0
+243,The Tale of The Princess Kaguya,8.094,2013-11-23,,tt2576852,149871,137,24366656,49300000
+244,Ghost in the Shell: Arise - Border 2: Ghost Whispers,7.0,2013-11-29,,tt3017864,212168,57,0,0
+245,Lupin the Third vs. Detective Conan: The Movie,6.883,2013-12-07,,tt3335192,239529,106,41397727,0
+246,Hunter x Hunter: The Last Mission,7.0,2013-12-27,,tt3198698,239523,97,7449778,0
+247,One Piece Episode of Merry: The Tale of One More Friend,7.125,2013-12-31,,tt3354352,245538,107,0,0
+248,Giovanni's Island,7.5,2014-02-22,,tt3178174,239367,102,0,0
+249,Cross Road,6.3,2014-02-25,,tt7386590,277095,2,0,0
+250,Doraemon: New Nobita's Great Demon - Peko and the Exploration Party of Five,6.127,2014-03-08,,tt3949650,285812,109,35900000,0
+251,Crayon Shin-chan: Intense Battle! Robo Dad Strikes Back,7.5,2014-04-19,,tt3871940,305143,97,17542139,0
+252,Detective Conan: Dimensional Sniper,6.831,2014-04-19,,tt3455204,257512,110,42028116,0
+253,Avengers Confidential: Black Widow & Punisher,6.4,2014-04-19,,tt3482378,257346,83,0,0
+254,Tamako Love Story,7.208,2014-04-26,,tt3413018,257475,83,1226623,0
+255,Appleseed Alpha,6.723,2014-05-28,,tt3638012,269650,93,0,0
+256,Saint Seiya: Legend of Sanctuary,6.6,2014-06-21,,tt2231489,287590,93,17150803,8000000
+257,Lupin the Third: Jigen's Gravestone,7.4,2014-06-21,,tt3830998,260516,51,0,0
+258,Ghost in the Shell: Arise - Border 3: Ghost Tears,6.761,2014-06-28,,tt3579524,240341,59,240470,0
+259,K: Missing Kings,6.527,2014-07-12,,tt3794204,271708,75,0,0
+260,Pokémon the Movie: Diancie and the Cocoon of Destruction,6.649,2014-07-19,,tt3918368,303903,76,28595105,24720400
+261,When Marnie Was There,7.937,2014-07-19,,tt3398268,242828,103,34949567,0
+262,Stand by Me Doraemon,7.4,2014-08-08,,tt3331846,265712,94,83100000,35000000
+263,Initial D Legend 1: Awakening,7.8,2014-08-24,,tt3971764,271709,62,715443,0
+264,Ghost in the Shell: Arise - Border 4: Ghost Stands Alone,6.909,2014-09-06,,tt4016942,279254,59,205108,0
+265,Black Butler: Book of Murder,7.96,2014-10-25,,tt5714216,511082,116,0,0
+266,Expelled from Paradise,6.46,2014-11-15,,tt2859246,304023,104,0,0
+267,ME!ME!ME!,7.9,2014-11-21,,tt5493898,787561,6,0,0
+268,The Last: Naruto the Movie,7.5,2014-12-06,,tt3717532,317442,114,19840000,750000
+269,Yo-kai Watch: The Movie,7.4,2014-12-20,,tt4168022,358651,97,99481307,0
+270,"One Piece ""3D2Y"": Overcome Ace's Death! Luffy's Vow to his Friends",7.07,2014-12-31,,tt5098548,290271,105,0,0
+271,PSYCHO-PASS: The Movie,7.002,2015-01-09,,tt4219130,296917,113,0,0
+272,The Case of Hana & Alice,7.286,2015-02-20,,tt4125300,311054,98,0,0
+273,Doraemon: Nobita and the Space Heroes,6.247,2015-03-07,,tt4788602,350650,100,32700000,46597700
+274,Beyond the Boundary: I'll Be Here – Past,6.835,2015-03-15,,tt4531412,311056,82,0,0
+275,Detective Conan: Sunflowers of Inferno,6.11,2015-04-18,,tt3737650,316873,113,52920296,0
+276,Dragon Ball Z: Resurrection 'F',6.857,2015-04-18,,tt3819668,303857,93,61768190,5000000
+277,Beyond the Boundary: I'll Be Here – Future,7.433,2015-04-25,,tt4539114,333622,90,0,0
+278,Code Geass: Akito the Exiled 3: The Brightness Falls,6.391,2015-05-02,,tt3354302,347200,60,834927,0
+279,Miss Hokusai,6.682,2015-05-09,,tt3689910,267970,90,0,0
+280,Mushi-Shi: The Next Chapter - Drops of Bells,8.302,2015-05-16,,tt5575408,312966,47,0,0
+281,Initial D Legend 2: Racer,7.8,2015-05-23,,tt4971484,321487,60,220527,0
+282,Typhoon Noruda,6.5,2015-06-05,,tt4663760,358632,27,0,0
+283,Love Live! The School Idol Movie,7.7,2015-06-13,,tt3837248,333623,99,22069046,0
+284,Ghost in the Shell: The New Movie,6.6,2015-06-20,,tt4337072,334376,100,1713406,0
+285,Little Witch Academia: The Enchanted Parade,7.215,2015-07-03,,tt4831682,347413,55,0,0
+286,Code Geass: Akito the Exiled 4: Memories of Hatred,6.067,2015-07-04,,tt3354306,347187,60,0,0
+287,The Boy and the Beast,7.9,2015-07-11,,tt4272866,315465,119,49714378,0
+288,Pokémon the Movie: Hoopa and the Clash of Ages,6.781,2015-07-18,,tt4503906,350499,73,21815482,0
+289,Boruto: Naruto the Movie,7.46,2015-08-07,,tt4618398,347201,95,38362448,0
+290,Date A Live: Mayuri Judgement,7.3,2015-08-22,,tt5331768,331061,72,247826,0
+291,Tokyo Ghoul: Jack,7.6,2015-09-05,,tt5265536,483685,30,0,0
+292,The Anthem of the Heart,7.6,2015-09-19,,tt4489416,364111,119,8852989,0
+293,The Empire of Corpses,6.198,2015-10-02,,tt4235644,342588,120,0,0
+294,Harmony,6.871,2015-11-13,,tt3615204,357411,119,0,0
+295,Girls und Panzer der Film,6.991,2015-11-21,,tt5284414,357405,120,0,0
+296,Digimon Adventure tri. Part 1: Reunion,6.8,2015-11-21,,tt4307880,357400,97,1928616,0
+297,Ajin: Demi-Human – Compel,7.092,2015-11-27,,tt5234428,357390,104,0,0
+298,High☆Speed!: Free! Starting Days,6.9,2015-12-05,,tt4872210,357416,110,0,0
+299,One Piece: Adventure of Nebulandia,7.7,2015-12-20,,tt6609162,373879,106,0,0
+300,Kizumonogatari Part 1: Tekketsu,7.681,2016-01-08,,tt3138698,357786,64,6319100,0
+301,Initial D Legend 3: Dream,7.5,2016-02-06,,tt5463088,372758,65,0,0
+302,Dou kyu sei – Classmates,8.3,2016-02-20,,tt5526028,372754,61,1397526,0
+303,Doraemon: Nobita and the Birth of Japan,6.782,2016-03-05,,tt5544700,384345,104,58400000,0
+304,Digimon Adventure tri. Part 2: Determination,7.0,2016-03-12,,tt5216534,372752,84,1476624,0
+305,Crayon Shin-chan: Fast Asleep! Dreaming World Big Assault!,6.5,2016-04-16,,tt5526456,424656,97,21600242,0
+306,Detective Conan: The Darkest Nightmare,6.752,2016-04-16,,tt4954660,374856,112,9953934,0
+307,I've Always Liked You,7.442,2016-04-23,,tt5889338,374853,63,0,0
+308,Yu-Gi-Oh!: The Dark Side of Dimensions,7.6,2016-04-23,,tt4273562,366170,130,7445186,0
+309,She and Her Cat: Everything Flows,6.8,2016-05-21,,tt5321682,403064,28,0,0
+310,Naruto OVA 13: The Day Naruto Became Hokage,7.5,2016-07-06,,tt5866090,1017204,11,0,0
+311,Kingsglaive: Final Fantasy XV,6.756,2016-07-09,,tt5595168,390734,115,269980,0
+312,Pokémon the Movie: Volcanion and the Mechanical Marvel,6.709,2016-07-16,,tt5889204,382190,97,19727392,0
+313,Accel World: Infinite Burst,6.62,2016-07-23,,tt5923132,381873,88,0,0
+314,One Piece Film: GOLD,7.2,2016-07-23,,tt5251328,374205,120,66207073,0
+315,Kizumonogatari Part 2: Nekketsu,8.0,2016-08-19,,tt5084196,362584,68,3546960,0
+316,Your Name.,8.5,2016-08-26,,tt5311514,372058,106,405320132,7500000
+317,A Silent Voice: The Movie,8.383,2016-09-17,,tt5323662,378064,129,30819442,0
+318,GANTZ:O,7.307,2016-10-14,,tt5923962,396263,95,2238600,0
+319,In This Corner of the World,7.911,2016-11-12,,tt4769824,378108,130,19496308,0
+320,Orange: Future,7.5,2016-11-18,,tt6096128,419094,63,0,0
+321,Assassination Classroom the Movie: 365 Days' Time,6.468,2016-11-19,,tt6475250,431808,92,183551,0
+322,The Moment You Fall in Love,7.5,2016-12-17,,tt6327570,472516,63,0,0
+323,One Piece: Heart of Gold,7.455,2016-12-31,,tt6425816,433157,104,0,0
+324,Fate/Grand Order: First Order,6.8,2016-12-31,,tt6213810,428142,72,0,0
+325,Kizumonogatari Part 3: Reiketsu,8.0,2017-01-06,,tt5084198,362585,83,817874,0
+326,Black Butler: Book of the Atlantic,7.495,2017-01-21,,tt5476944,432131,100,511132,0
+327,Genocidal Organ,6.597,2017-02-03,,tt3615160,357407,115,0,0
+328,Lupin the 3rd: Goemon's Blood Spray,7.8,2017-02-04,,tt6047974,456611,54,0,0
+329,Sword Art Online the Movie: Ordinal Scale,7.7,2017-02-18,,tt5544384,413594,119,29322339,0
+330,Trinity Seven: Eternity Library & Alchemic Girl,7.115,2017-02-25,,tt6344696,428292,55,0,0
+331,Digimon Adventure tri. Part 4: Loss,7.0,2017-02-25,,tt5468016,422347,82,59114,0
+332,Doraemon: Nobita's Great Adventure in the Antarctic Kachi Kochi,6.5,2017-03-04,,tt5912470,462677,101,61153455,8000000
+333,Kuroko's Basketball the Movie: Last Game,7.641,2017-03-18,,tt6728390,428707,90,8261488,0
+334,Napping Princess,6.663,2017-03-18,,tt5731132,428288,111,0,0
+335,"Night Is Short, Walk On Girl",7.4,2017-04-07,,tt6335734,430214,93,3878208,0
+336,Case Closed: The Crimson Love Letter,6.487,2017-04-15,,tt5692622,438058,112,63147576,0
+337,Fairy Tail: Dragon Cry,6.608,2017-05-06,,tt6548966,433422,85,1420035,0
+338,Lu Over the Wall,7.0,2017-05-19,,tt6452332,436120,112,0,0
+339,BLAME!,6.522,2017-05-20,,tt6574146,409421,106,0,0
+340,Resident Evil: Vendetta,6.9,2017-05-27,,tt5776208,400136,97,256320,0
+341,The Irregular at Magic High School: The Girl Who Summons the Stars,6.295,2017-06-17,,tt6580380,431821,90,2819492,0
+342,Mary and The Witch's Flower,7.129,2017-07-08,,tt6336356,430447,103,42170089,0
+343,"No Game, No Life: Zero",7.82,2017-07-15,,tt5914996,445030,106,6356284,0
+344,Pokémon the Movie: I Choose You!,7.072,2017-07-15,,tt6595896,436931,98,37552144,0
+345,Fireworks,6.6,2017-08-18,,tt6317962,431819,90,26617621,0
+346,Haikyu!! The Movie: Battle of Concepts,8.02,2017-09-29,,tt7328556,461763,88,0,0
+347,Fate/stay night: Heaven's Feel I. Presage Flower,7.424,2017-10-14,,tt4054952,283984,120,17422935,0
+348,Mazinger Z: Infinity,6.946,2017-10-27,,tt6470762,452970,95,2732673,0
+349,Godzilla: Planet of the Monsters,6.398,2017-11-17,,tt5979874,449574,89,3300000,0
+350,"Love, Chunibyo & Other Delusions! Take On Me",7.7,2018-01-06,,tt6915208,460399,94,1822043,0
+351,Maquia: When the Promised Flower Blooms,8.155,2018-02-24,,tt7339826,476292,115,4345395,0
+352,Doraemon: Nobita's Treasure Island,7.0,2018-03-03,,tt8098546,495925,108,80900000,0
+353,Bungo Stray Dogs: Dead Apple,8.1,2018-03-03,,tt8391976,483455,90,2373203,0
+354,Batman Ninja,5.859,2018-03-24,,tt7451284,485942,85,0,0
+355,Case Closed: Zero the Enforcer,6.2,2018-04-13,,tt7880466,493006,110,101860359,0
+356,Liz and the Blue Bird,7.517,2018-04-21,,tt7089878,482150,91,737286,0
+357,Godzilla: City on the Edge of Battle,6.573,2018-05-18,,tt8015080,492719,101,876000,0
+358,Pokémon the Movie: The Power of Us,7.2,2018-07-13,,tt8108230,494407,98,23740788,0
+359,Mirai,7.144,2018-07-20,,tt6900448,475215,98,29863754,0
+360,My Hero Academia: Two Heroes,7.879,2018-08-03,,tt7745068,505262,96,27507549,12000000
+361,Penguin Highway,7.1,2018-08-17,,tt8076344,508422,118,3902796,0
+362,The Seven Deadly Sins: Prisoners of the Sky,7.535,2018-08-18,,tt9089294,507569,99,3914227,0
+363,Modest Heroes,6.622,2018-08-24,,tt8223844,514710,54,0,0
+364,I Want to Eat Your Pancreas,8.2,2018-09-01,,tt7236034,504253,108,33748006,0
+365,Okko's Inn,7.198,2018-09-12,,tt8328740,521296,94,293385,0
+366,Re:ZERO -Starting Life in Another World- Memory Snow,7.2,2018-10-06,,tt8565186,532321,60,1725339,0
+367,Godzilla: The Planet Eater,6.52,2018-11-09,,tt8478602,536115,91,1500000,0
+368,Dragon Ball Super: Broly,7.902,2018-12-14,,tt7961060,503314,101,125002821,1000000
+369,One Piece: Stampede,7.8,2019-01-03,,tt9430698,568012,101,81562741,0
+370,Made in Abyss: Journey's Dawn,7.599,2019-01-04,,tt10068158,526426,119,135821,0
+371,Fate/stay night: Heaven's Feel II. Lost Butterfly,6.969,2019-01-12,,tt8091892,390634,117,19790000,0
+372,Made in Abyss: Wandering Twilight,8.307,2019-01-18,,tt10068544,526429,105,0,0
+373,The Relative Worlds,5.836,2019-01-25,,tt9648078,553833,93,0,0
+374,Psycho-Pass: Sinners of the System - Case.1 Crime and Punishment,6.635,2019-01-25,,tt10443844,510242,60,0,0
+375,Saga of Tanya the Evil: The Movie,8.062,2019-02-08,,tt9507276,553839,98,288460,0
+376,City Hunter: Shinjuku Private Eyes,6.4,2019-02-08,,tt8161914,540141,95,11962753,0
+377,Code Geass: Lelouch of the Re;surrection,7.2,2019-02-09,,tt6344664,553837,112,9982083,0
+378,Psycho-Pass: Sinners of the System - Case.2 First Guardian,6.778,2019-02-15,,tt11078434,559562,60,0,0
+379,Is It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow of the Orion,7.7,2019-02-15,,tt9526152,553835,82,338632,0
+380,Doraemon: Nobita's Chronicle of the Moon Exploration,7.3,2019-03-01,,tt9735672,575222,111,65406606,0
+381,Psycho-Pass: Sinners of the System - Case.3 On the Other Side of Love and Hate,7.049,2019-03-18,,tt11078522,559566,70,0,0
+382,Demon Slayer: Kimetsu no Yaiba - Sibling's Bond,7.907,2019-03-29,,tt14888860,820232,105,480522,0
+383,Trinity Seven: Heaven's Library & Crimson Lord,7.6,2019-03-29,,tt9826484,570269,63,15712,0
+384,Case Closed: The Fist of Blue Sapphire,6.199,2019-04-12,,tt9501310,566555,109,115448200,0
+385,The Wonderland,6.4,2019-04-26,,tt9563632,573683,115,0,0
+386,Kabaneri of the Iron Fortress: The Battle of Unato,7.083,2019-05-10,,tt10253816,567006,82,0,0
+387,Promare,7.058,2019-05-24,,tt9116358,553600,111,9869306,0
+388,Lupin the IIIrd: Fujiko's Lie,7.2,2019-05-31,,tt9900060,587870,58,0,0
+389,Children of the Sea,7.066,2019-06-07,,tt9850064,585077,111,0,0
+390,Rascal Does Not Dream of a Dreaming Girl,8.253,2019-06-15,,tt9881586,572154,90,0,0
+391,Ride Your Wave,7.6,2019-06-21,,tt9193612,530079,95,0,0
+392,Pokémon the Movie: Mewtwo Strikes Back - Evolution,6.7,2019-07-12,,tt8856470,571891,98,26654184,0
+393,Weathering with You,8.0,2019-07-19,,tt9426210,568160,112,192729404,11100000
+394,Dragon Quest: Your Story,6.751,2019-08-02,,tt10127562,592867,102,0,0
+395,NiNoKuni,6.6,2019-08-23,,tt9760504,594188,106,2858846,0
+396,KONOSUBA – God's blessing on this wonderful world! Legend of Crimson,8.047,2019-08-30,,tt9239552,532067,90,5078942,0
+397,Violet Evergarden: Eternity and the Auto Memory Doll,8.1,2019-09-06,,tt10477558,610892,91,10841702,0
+398,Hello World,7.305,2019-09-20,,tt9418812,604605,98,0,0
+399,One Piece: Episode of Skypiea,7.253,2019-09-26,,tt11744496,545742,104,0,0
+400,Naruto to Boruto: The Live 2019,7.444,2019-10-05,,,638566,174,0,0
+401,Her Blue Sky,7.3,2019-10-11,,tt10981202,615165,108,4736031,0
+402,Re:ZERO -Starting Life in Another World- The Frozen Bond,7.3,2019-11-08,,tt10112232,566451,76,2300000,0
+403,Fragtime,6.2,2019-11-22,,tt11343974,630027,61,0,0
+404,Lupin III: The First,7.298,2019-12-06,,tt10621032,614587,93,7334393,0
+405,Seven Days War,6.5,2019-12-13,,tt11469408,608085,89,0,0
+406,My Hero Academia: Heroes Rising,8.1,2019-12-20,,tt11107074,592350,104,30017163,0
+407,Made in Abyss: Dawn of the Deep Soul,7.8,2020-01-17,,tt10068916,573730,105,4971635,0
+408,Goblin Slayer: Goblin's Crown,7.299,2020-02-01,,tt11151982,631132,86,0,0
+409,Digimon Adventure: Last Evolution Kizuna,8.1,2020-02-21,,tt9507234,571265,95,17361009,0
+410,Altered Carbon: Resleeved,6.555,2020-03-18,,tt9310328,665251,75,0,0
+411,Psycho-Pass 3: First Inspector,7.585,2020-03-27,,tt11433874,655431,137,757096,0
+412,Sol Levante,4.767,2020-04-02,,tt12079068,688900,4,0,0
+413,A Whisker Away,7.878,2020-06-18,,tt11958344,667520,104,0,0
+414,Doraemon: Nobita's New Dinosaur,7.387,2020-08-07,,tt10588750,682153,111,34218525,0
+415,Fate/stay night: Heaven's Feel III. Spring Song,7.714,2020-08-15,,tt8092118,390635,120,20150000,0
+416,Given,8.3,2020-08-22,,tt11802992,632632,60,930363,0
+417,The Stranger by the Shore,7.9,2020-09-11,,tt11193002,642121,59,0,0
+418,Violet Evergarden: The Movie,8.295,2020-09-18,,tt8652818,533514,140,20339624,0
+419,Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train,8.201,2020-10-16,,tt11032374,635302,117,523542183,15700000
+420,Date A Bullet: Nightmare or Queen,7.7,2020-11-13,,tt13308788,723343,29,0,0
+421,Stand by Me Doraemon 2,7.8,2020-11-20,,tt13428402,728754,96,0,0
+422,Grisaia: Phantom Trigger the Animation - Stargazer,6.5,2020-11-27,,,779019,59,0,0
+423,Over the Sky,6.8,2020-11-27,,tt13139218,680041,95,0,0
+424,Fate/Grand Order the Movie: Divine Realm of the Round Table: Camelot 1 Wandering; Agateram,7.1,2020-12-05,,tt9534948,637202,90,3607899,2000000
+425,Pokémon the Movie: Secrets of the Jungle,7.148,2020-12-25,,tt11819890,662708,101,21097921,0
+426,Poupelle of Chimney Town,6.536,2020-12-25,,tt13276012,655437,100,0,0
+427,"Josee, the Tiger and the Fish",8.27,2020-12-25,,tt12879624,652837,98,0,0
+428,Gintama: The Very Final,8.2,2021-01-08,,tt10766468,732203,104,17252960,0
+429,Pretty Guardian Sailor Moon Eternal the Movie Part 1,7.844,2021-01-08,,tt10635042,618851,81,0,0
+430,Earwig and the Witch,5.9,2021-02-03,,tt12441478,683127,83,842744,0
+431,Pretty Guardian Sailor Moon Eternal the Movie Part 2,8.2,2021-02-11,,tt25407384,784500,80,1130225,0
+432,Evangelion: 3.0+1.0 Thrice Upon a Time,8.2,2021-03-08,,tt2458948,283566,155,93882453,29700000
+433,Detective Conan: The Scarlet Bullet,6.433,2021-04-16,,tt12093860,662638,110,95371578,0
+434,Pompo the Cinephile,7.2,2021-06-04,,tt12439248,678458,94,186542,0
+435,Fortune Favors Lady Nikuko,7.2,2021-06-11,,tt13758684,781816,97,0,0
+436,Mobile Suit Gundam Hathaway,7.2,2021-06-11,,tt13288678,685274,96,0,0
+437,The Seven Deadly Sins: Cursed by Light,7.703,2021-07-02,,tt13884144,843241,79,1094673,0
+438,Belle,7.648,2021-07-16,,tt13651628,776305,121,63501160,0
+439,Words Bubble Up Like Soda Pop,7.34,2021-07-22,,tt12735338,579741,88,0,0
+440,My Hero Academia: World Heroes' Mission,7.6,2021-08-06,,tt13544716,768744,105,46940541,0
+441,Puparia,7.958,2021-09-23,,tt13680598,766423,3,0,0
+442,Child of Kamiari Month,6.5,2021-10-08,,tt13057626,628964,100,0,0
+443,Bright: Samurai Soul,5.604,2021-10-12,,tt14837960,839100,80,0,0
+444,The Deer King,6.511,2021-10-28,,tt11417856,633844,113,0,0
+445,Sing a Bit of Harmony,7.485,2021-10-29,,tt13064272,741335,109,0,0
+446,Sword Art Online the Movie - Progressive - Aria of a Starless Night,7.9,2021-10-30,,tt13424422,761898,97,14037060,0
+447,Summer Ghost,7.2,2021-11-12,,tt15052770,798544,40,0,0
+448,Ghost in the Shell: SAC_2045 Sustainable War,6.807,2021-12-21,,tt15392166,965244,118,0,0
+449,Jujutsu Kaisen 0,8.117,2021-12-24,,tt14331144,810693,105,195870885,0
+450,Bubble,7.291,2022-02-14,,tt16360006,912598,101,0,0
+451,"Goodbye, Don Glees!",7.0,2022-02-18,,tt14967958,846993,95,0,0
+452,Junk Head,6.6,2022-02-18,,tt6848928,464768,100,81755,0
+453,Doraemon the Movie: Nobita's Little Star Wars 2021,6.531,2022-03-04,,tt13740078,782054,108,22044058,0
+454,Detective Conan: The Bride of Halloween,6.4,2022-04-15,,tt19770970,903939,111,72699093,0
+455,The Quintessential Quintuplets Movie,8.3,2022-05-20,,tt15721650,820067,136,17288993,0
+456,Inu-Oh,7.209,2022-05-28,,tt10540510,642538,98,484127,0
+457,Teasing Master Takagi-san: The Movie,8.443,2022-06-10,,tt15313532,938567,73,2739967,0
+458,Dragon Ball Super: Super Hero,7.9,2022-06-11,,tt14614892,610150,100,86600000,0
+459,Laid-Back Camp the Movie,7.604,2022-07-01,,tt14364238,566466,121,7283918,0
+460,One Piece Film Red,7.188,2022-08-06,,tt16183464,900667,115,171315305,0
+461,"The Tunnel to Summer, the Exit of Goodbyes",7.683,2022-09-09,,tt17382524,916192,83,872000,0
+462,Drifting Home,7.368,2022-09-09,,tt15494038,877957,121,0,0
+463,Legend of the Galactic Heroes: Die Neue These - Intrigue 1,6.074,2022-09-30,,tt32909363,1030419,90,0,0
+464,Naruto 20th Anniversary - Road of Naruto,7.6,2022-10-02,,,1031396,10,0,0
+465,"To Me, the One Who Loved You",6.039,2022-10-07,,tt15450826,874745,98,0,0
+466,Sword Art Online the Movie – Progressive – Scherzo of Deep Night,7.7,2022-10-22,,tt15830702,893712,100,9071701,0
+467,Zen - Grogu and Dust Bunnies,6.084,2022-11-11,,tt23626160,1044343,3,0,0
+468,Suzume,7.891,2022-11-11,,tt16428256,916224,122,314992206,13000000
+469,That Time I Got Reincarnated as a Slime the Movie: Scarlet Bond,7.4,2022-11-25,,tt15467380,876792,108,11628645,0
+470,The First Slam Dunk,7.778,2022-12-03,,tt15242330,783675,125,258000000,0
+471,Kaguya-sama: Love Is War -The First Kiss That Never Ends-,8.0,2022-12-17,,tt23770418,997317,96,440441,0
+472,The Seven Deadly Sins: Grudge of Edinburgh Part 1,7.7,2022-12-20,,tt17677744,989937,52,0,0
+473,Lonely Castle in the Mirror,7.163,2022-12-23,,tt22868842,942881,116,0,0
+474,Blue Giant,7.797,2023-02-17,,tt15737898,887870,120,0,0
+475,Detective Conan: Black Iron Submarine,7.0,2023-04-14,,tt27521477,1047041,110,106771806,0
+476,LUPIN THE 3rd vs. CAT'S EYE,6.16,2023-04-20,,tt22192398,1027159,92,0,0
+477,Pretty Guardian Sailor Moon Cosmos the Movie Part 1,7.279,2023-06-09,,tt39318020,968868,80,0,0
+478,Black Clover: Sword of the Wizard King,8.092,2023-06-16,,tt22868844,812225,113,0,0
+479,Resident Evil: Death Island,7.294,2023-06-22,,tt26674627,1083862,91,53929,0
+480,Rascal Does Not Dream of a Sister Venturing Out,7.7,2023-06-23,,tt27348312,1056803,74,0,0
+481,Pretty Guardian Sailor Moon Cosmos the Movie Part 2,7.882,2023-06-30,,tt28284638,968870,80,524551,0
+482,The Boy and the Heron,7.403,2023-07-14,,tt6587046,508883,124,294200000,50000000
+483,The Seven Deadly Sins: Grudge of Edinburgh Part 2,7.181,2023-08-08,,tt25010142,1064835,55,0,0
+484,maboroshi,7.283,2023-09-15,,tt14935892,845387,112,1700000,0
+485,Rascal Does Not Dream of a Knapsack Kid,7.787,2023-12-01,,tt28036417,1086591,75,2050242,0
+486,The Imaginary,7.713,2023-12-15,,tt16369708,913001,108,0,0
+487,SPY x FAMILY CODE: White,7.115,2023-12-22,,tt26684398,1062807,110,59629242,5000000
+488,Monsters 103 Mercies Dragon Damnation,7.178,2024-01-21,,tt30475122,1230393,26,0,0
+489,Mobile Suit Gundam SEED FREEDOM,6.9,2024-01-26,,tt14759062,1146972,125,36038764,0
+490,HAIKYU!! The Dumpster Battle,7.7,2024-02-16,,tt30476486,1012201,84,100255784,5000000
+491,Detective Conan: The Million-Dollar Pentagram,6.8,2024-04-12,,tt31474158,1209217,110,108136957,0
+492,BLUE LOCK THE MOVIE -EPISODE NAGI-,7.407,2024-04-19,,tt28671146,1104844,91,14291561,0
+493,My Oni Girl,7.207,2024-05-24,,tt31788773,1231574,112,0,0
+494,Baki Hanma VS Kengan Ashura,7.425,2024-06-05,,tt31869664,1263421,60,0,0
+495,Look Back,8.084,2024-06-28,,tt31711040,1244492,58,12648664,0
+496,Mononoke the Movie: The Phantom in the Rain,7.074,2024-07-26,,tt32574149,989730,90,0,0
+497,My Hero Academia: You're Next,7.204,2024-08-02,,tt32176689,1159311,110,32224616,0
+498,The Colors Within,6.893,2024-08-30,,tt23951384,1056444,101,2485967,0
+499,OVERLORD: The Sacred Kingdom,7.9,2024-09-20,,tt14603848,1014505,134,7614966,0
+500,Attack on Titan: THE LAST ATTACK,8.784,2024-11-08,,tt33175825,1333100,145,21525687,0
+501,Solo Leveling -ReAwakening-,7.075,2024-11-26,,tt33428606,1357633,116,6331827,0
+502,The Rose of Versailles,7.144,2025-01-31,,tt21996220,1021679,113,1489577,0
+503,Batman Ninja vs. Yakuza League,6.731,2025-03-17,,tt32508210,1297763,90,0,0
+504,Kaiju No. 8: Mission Recon,7.902,2025-03-28,,tt35636950,1326106,110,0,0
+505,JUJUTSU KAISEN: Hidden Inventory / Premature Death - The Movie,8.167,2025-05-30,,tt36956670,1338799,110,9395267,0
+506,Demon Slayer: Kimetsu no Yaiba Infinity Castle,7.7,2025-07-18,,tt32820897,1311031,156,733030221,20000000
+507,100 METERS,7.76,2025-09-19,,tt32600395,1295026,107,3033000,0
+508,Chainsaw Man - The Movie: Reze Arc,8.336,2025-09-19,,tt30472557,1218925,99,174502910,4100000
+509,JUJUTSU KAISEN: Execution,5.7,2025-11-07,,tt38121182,1539104,88,44559195,0
+510,Cosmic Princess Kaguya!,8.3,2026-01-22,,tt38872297,1575337,141,0,0
