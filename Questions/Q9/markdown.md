@@ -16,10 +16,3 @@ Das Datum der Woche mit dem höchsten Suchinteresse. Bei Oppenheimer war das 2 T
 Peak VOR Release  → organischer Hype, Erwartung war hoch
 Peak NACH Release → Interesse durch Mundpropaganda / Reviews
 
-#### choosing the movies:
-Releasejahr: 2010–2023 → stabile Google-Trends Daten
-vote_count ≥ 500 → nur relevante Filme
-sort_by=popularity.desc → Mischung aus Blockbuster + Mid-Budget
-≈120 Filme → ausreichend für Korrelation / Regression
-
-### analyze
