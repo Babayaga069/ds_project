@@ -26,7 +26,7 @@
 - 7. How does film genre, along with production budget, influence the likelihood of receiving an Academy Award nomination or win?
 
 #### Tom
-- 8. How does receiving an Academy Award nomination or win influence a film’s box office revenue and profitability after the announcement?
+- 8. How does receiving an Academy Award nomination or win influence a film’s box office revenue?
 
 #### Karl
 - 9. To what extent does pre-release public sentiment (e.g., social media engagement and online search interest) predict the subsequent financial and critical success of movies?
