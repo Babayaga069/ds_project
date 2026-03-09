@@ -20,7 +20,7 @@
 - 5. What collaboration networks emerge between actors and directors, and how do recurring collaborations influence movie success?
 
 ####
-- 6. How does the financial and critical success of movie sequels compare to their original films across franchises?
+- 6. How does the financial and critical success of movie sequels between 2010 and 2024 compare to their original films across franchises?
 
 #### Tom
 - 7. How does film genre, along with production budget, influence the likelihood of receiving an Academy Award nomination or win?
@@ -30,6 +30,7 @@
 
 #### Karl
 - 9. To what extent does pre-release public sentiment (e.g., social media engagement and online search interest) predict the subsequent financial and critical success of movies?
+    (How does pre- and post-release Google search interest relate to the financial and critical success of movies released between 2010 and 2023?)
 
 #### Jonas
 - 10. Does sticking to typical genre plots lead to greater box office success, or do audiences reward films that subvert these expectations?
