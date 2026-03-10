@@ -1,0 +1,11 @@
+id,name,avg_score,total_vote_count,latest_movie_release_year,tmdb_id,imdb_id,directed_movie_count
+1,Christopher Nolan,8.05,18012558,2023,525,nm0634240,12
+2,Martin Scorsese,7.97,11438197,2023,1032,nm0000217,22
+3,Steven Spielberg,7.43,15703299,2022,488,nm0000229,34
+4,Taika Waititi,7.25,2218502,2023,55934,nm0169806,6
+5,James Cameron,7.74,7217264,2025,2710,nm0000116,9
+6,Ryan Coogler,8.02,2094488,2025,1056121,nm3363032,5
+7,Hayao Miyazaki,8.36,3512121,2023,608,nm0594503,12
+8,Guillermo del Toro,7.25,3563877,2025,10828,nm0868219,12
+9,Wes Anderson,7.64,3290443,2025,5655,nm0027572,12
+10,Edgar Wright,7.56,2939234,2025,11090,nm0942367,7
