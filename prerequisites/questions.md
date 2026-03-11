@@ -19,7 +19,7 @@
 #### Frotan
 - 5. What collaboration networks emerge between actors and directors, and how do recurring collaborations influence movie success?
 
-####
+#### Karl
 - 6. How does the financial and critical success of movie sequels between 2010 and 2024 compare to their original films across franchises?
 
 #### Tom
