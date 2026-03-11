@@ -1,7 +1,7 @@
 # Movies and Shows
 
 #### Tom
-- 1. How strongly does production budget predict box office revenue and profitability across different genres and release periods?
+- 1. How strongly does production budget predict box office revenue across different genres and release periods?
 
 #### Frotan
 - 2. Which combination of production budget, genre, runtime and release year best explains financial and rating-based movie success for anime movies in the last 26 years?
