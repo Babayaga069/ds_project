@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib
+seaborn
+keybert
+spacy
+nltk
+wordcloud
+sentence-transformers
+tqdm
+scikit-learn
+scipy
