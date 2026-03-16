@@ -3,7 +3,7 @@ from dash import Dash, html, dcc
 
 # for multiple pages
 app = Dash(__name__, use_pages=True)
-
+server = app.server
 app.layout = html.Div([
     html.H1("Main page Data Sciene Project"),
     

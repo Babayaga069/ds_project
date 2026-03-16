@@ -1,3 +1,5 @@
+dash
+gunicorn
 pandas
 numpy
 matplotlib
