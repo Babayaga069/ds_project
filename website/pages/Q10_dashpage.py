@@ -5,18 +5,16 @@ from wordcloud import WordCloud
 import matplotlib
 matplotlib.use('Agg')
 import plotly.express as px
-from nltk.tokenize import sent_tokenize
-from sentence_transformers import SentenceTransformer, util
+
 
 dash.register_page(__name__, name='Question:10')
 
-data_fantasy = pd.read_csv('pages/movies_plot_fantasy.csv')
-data_horror = pd.read_csv('pages/movies_plot_horror.csv')
+livedata_fantasy = pd.read_csv('pages/precomputed_fantasy.csv')
+livedata_horror = pd.read_csv('pages/precomputed_horror.csv')
 
 data_fantasy_cached = pd.read_csv('pages/fantasy_plotframe.csv')
 data_horror_cached = pd.read_csv('pages/horror_plotframe.csv')
 
-sim_model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def wordmap(dataframe, title):
     frequency = dataframe.set_index('Plotphrase')['Count'].to_dict()
@@ -42,77 +40,20 @@ def boxplot(dataframe, column_box_office, genre):
     figure = px.box(
         dataframe,
         x = "Used_Plotphrases",
-        y = "box_office_worldwide",
+        y = column_box_office,
         color = "Used_Plotphrases",
-        color_discrete_map = {False: '#ff9999', True: '#66b3ff'}
+        color_discrete_map = {False: '#ff9999', True: '#66b3ff'},
+        category_orders= {"Used_Plotphrases": ["True","False"]}
     )
     figure.update_layout(
         title = f"Distribution of Box office for {genre} movies",
         title_font_size = 14,
         xaxis_title = "Using Common plotphrases?",
         yaxis_title = "Box office revenue in $"
+    
     )
     return figure
 
-def compare_movies_with_plotphrases(dataframe_untouched, dataframe_plotphrases, column_box_office, column_plotphrase, sim_model, threshold):
-
-    dataframe_untouched = dataframe_untouched[dataframe_untouched[column_box_office] > 0]
-    list_plotphrase = list(dataframe_plotphrases['Plotphrase'])
-    top_embeddings = sim_model.encode(list_plotphrase)
-
-    phrase_used_list = []
-    best_phrase_list = []
-    best_score_list = []
-
-    for movie_plot in dataframe_untouched[column_plotphrase]:
-        
-        #default values
-
-        movies_uses_plotphrase = False
-        best_phrase = "None"
-        best_score = 0.0
-        check_text = str(movie_plot)
-
-        if len(check_text.strip()) > 0:
-
-            sentences = sent_tokenize(check_text)
-
-            if len(sentences) > 0 :
-
-                sentence_embeddings = sim_model.encode(sentences)
-                hits = util.cos_sim(sentence_embeddings, top_embeddings)
-                best_score = hits.max().item()
-                max_idx= hits.argmax().item()
-                phrase_idx = max_idx % hits.shape[1]
-                best_phrase = list_plotphrase[phrase_idx]
-
-                if best_score >= threshold:
-                    movies_uses_plotphrase = True
-
-        phrase_used_list.append(movies_uses_plotphrase)
-        best_phrase_list.append(best_phrase)
-        best_score_list.append(best_score)
-    
-    dataframe_untouched['Used_Plotphrases'] = phrase_used_list
-    dataframe_untouched['Best_Match_Phrase'] = best_phrase_list
-    dataframe_untouched['Similarity_Score'] = best_score_list
-
-    #  #debugging
-    # csv_filename = 'movies_debug.csv'
-    # dataframe_untouched.to_csv(csv_filename, index=False, sep=';', encoding='utf-8')
-    # print(f"Create debug file: {csv_filename}")
-
-    # # Print result 
-    # count_movie = dataframe_untouched['Used_Plotphrases'].value_counts()
-    # print("Movies used Plot")
-    # print(count_movie)
-    # succes = dataframe_untouched.groupby('Used_Plotphrases')[column_box_office].mean()
-    # succes_readable = succes.apply(lambda x: f"{x:,.0f} $")
-    # print("")
-    # print("Average Sucess:")
-    # print(succes_readable)
-
-    return dataframe_untouched
 
 def result_barcharts(dataframe, column_box_office):
     """
@@ -129,7 +70,8 @@ def result_barcharts(dataframe, column_box_office):
         color = "Used_Plotphrases",
         title = "Count of Movies",
         labels = {'Used_Plotphrases': 'Plotphrase used?', 'Count': 'Count of Movies'},
-        color_discrete_map = {'True': '#66b3ff', 'False': '#ff9999'} 
+        color_discrete_map = {'True': '#66b3ff', 'False': '#ff9999'},
+        category_orders= {"Used_Plotphrases": ["True","False"]}
     )
 
     success_data = dataframe.groupby("Used_Plotphrases")[column_box_office].mean().reset_index()
@@ -143,7 +85,8 @@ def result_barcharts(dataframe, column_box_office):
         color = "Used_Plotphrases",
         title = "Average Box office",
         labels = {'Used_Plotphrases': 'Plotphrase used?', 'Average_Success': 'Average Box office in $'},
-        color_discrete_map = {'True': '#66b3ff', 'False': '#ff9999'}
+        color_discrete_map = {'True': '#66b3ff', 'False': '#ff9999'},
+        category_orders= {"Used_Plotphrases": ["True","False"]}
 
     )
 
@@ -151,54 +94,14 @@ def result_barcharts(dataframe, column_box_office):
 
     return figure_count, figure_sucess
 
-figure_wc_fantasy = wordmap(
-    data_fantasy_cached,
-    title = "Fantasy"
-)
+#initial values
+initial_threshold = 0.6
+livedata_fantasy["Used_Plotphrases"] = (livedata_fantasy['Similarity_Score']>= initial_threshold).map({True:"True", False: "False"})
 
-figure_wc_horror = wordmap(
-    data_horror_cached,
-    title="Horror"
-)
+figure_wc_fantasy = wordmap(data_fantasy_cached, title= "Fantasy")
+figure_boxplot_fantasy = boxplot(livedata_fantasy, column_box_office= "box_office_worldwide", genre = "Fantasy")
+figure_bar_count_fantasy, figure_bar_sucess_fantasy = result_barcharts(livedata_fantasy, column_box_office="box_office_worldwide")
 
-livedata_fantasy = compare_movies_with_plotphrases(
-    data_fantasy,
-    data_fantasy_cached,
-    column_box_office = "box_office_worldwide",
-    column_plotphrase = "plot",
-    sim_model = sim_model,
-    threshold = 0.5
-
-)
-
-livedata_horror = compare_movies_with_plotphrases(
-    data_horror,
-    data_horror_cached,
-    column_box_office = "box_office_worldwide",
-    column_plotphrase = "plot",
-    sim_model = sim_model,
-    threshold = 0.5
-)
-
-figure_boxplot_fantasy = boxplot(
-    livedata_fantasy,
-    column_box_office= "box_office_worldwide",
-    genre = "Fantasy"
-)
-
-figure_boxplot_horror = boxplot(
-    livedata_horror,
-    column_box_office = "box_office_worldwide",
-    genre= "Horror"
-)
-
-figure_bar_count_fantasy, figure_bar_sucess_fantasy = result_barcharts(
-    livedata_fantasy, 
-    column_box_office='box_office_worldwide')
-figure_bar_count_horror, figure_bar_sucess_horror = result_barcharts(
-    livedata_horror,
-    column_box_office='box_office_worldwide')
-    
 
 layout = html.Div([
     html.H2("Context:"),
@@ -239,7 +142,7 @@ layout = html.Div([
         style={'marginBottom': '20px', 'fontSize': '18px'}
     ),
 
-    html.Label("Choose Similarity Threshold (The higher the stricter)(Updates take around 20-30 seconds)"),
+    html.Label("Choose Similarity Threshold "),
     dcc.Slider(
         id="threshold-slider",
         min=0.1,
@@ -322,32 +225,22 @@ def run_analysis(n_clicks, threshold_value, choosen_genre):
         return dash.no_update, dash.no_update, dash.no_update
     
     if choosen_genre == "fantasy":
-        data_genre = data_fantasy
-        data_plot = data_fantasy_cached
+        updated_dataframe = livedata_fantasy
         shown_titel = "Fantasy"
-
+    
     elif choosen_genre == "horror":
-        data_genre = data_horror
-        data_plot = data_horror_cached
+        updated_dataframe = livedata_horror
         shown_titel = "Horror"
-
-    else:
+    
+    else: 
         return dash.no_update, dash.no_update, dash.no_update
     
-    updated_dataframe= compare_movies_with_plotphrases(
-        dataframe_untouched= data_genre,
-        dataframe_plotphrases= data_plot,
-        column_box_office="box_office_worldwide",
-        column_plotphrase= "plot",
-        sim_model= sim_model,
-        threshold= threshold_value
-    )
-    
-    figure_count , figure_success = result_barcharts(updated_dataframe, "box_office_worldwide")
-    figure_boxplot = boxplot(updated_dataframe, column_box_office="box_office_worldwide", genre=shown_titel)
+    updated_dataframe["Used_Plotphrases"] = (updated_dataframe["Similarity_Score"] >= threshold_value).map({True: "True", False: "False"})
 
-    return figure_count, figure_success, figure_boxplot
-    
+    figure_count , figure_sucess = result_barcharts(updated_dataframe,"box_office_worldwide")
+    figure_boxplot = boxplot(updated_dataframe, column_box_office= "box_office_worldwide", genre=shown_titel)
+
+    return figure_count, figure_sucess, figure_boxplot
 
         
 
