@@ -131,6 +131,4 @@ dash_table.DataTable(
         'border': '1px solid grey'
     }
 )
-
-
 ])
