@@ -10,10 +10,10 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 # register as new page
-dash.register_page(__name__, name='Question 3: What are trends in the movie industry in terms of genre distribution and box office revenue from 2000 to 2025?')
+dash.register_page(__name__, name='Question 3:')
 
-data_2000 = pd.read_csv('pages/data_2000_2005.csv')
-data_2025 = pd.read_csv('pages/data_2020_2025.csv')
+data_2000 = pd.read_csv('pages/q3/data_2000_2005.csv')
+data_2025 = pd.read_csv('pages/q3/data_2020_2025.csv')
 
 #helper function
 
@@ -153,7 +153,7 @@ def plot_growth(dataframe_old, dataframe_new, column='genres', year_old="2000-20
     
     return fig
 
-def plot_toal_boxoffice(dataframe_old, dataframe_new, year_old="2000-2005", year_new="2020-2025", box_office='box_office_revenue', inflation_factor=1.0):
+def plot_toal_boxoffice(dataframe_old, dataframe_new, year_old="2000-2005", year_new="2020-2025", box_office='box_office_revenue', inflation_factor=1.6):
     """
     Compares total box_office revenue of two timeframes
     """
@@ -186,7 +186,7 @@ def plot_toal_boxoffice(dataframe_old, dataframe_new, year_old="2000-2005", year
     
     return fig
 
-def plot_genre_comp(dataframe_old, dataframe_new, genre_list, year_old="2000-2005", year_new="2020-2025", column='genres', box_office='box_office_revenue', inflation_factor=1.0):
+def plot_genre_comp(dataframe_old, dataframe_new, genre_list, year_old="2000-2005", year_new="2020-2025", column='genres', box_office='box_office_revenue', inflation_factor=1.6):
     """
     Compares The financial success of same genres in different time frames
     """
@@ -291,7 +291,7 @@ layout = html.Div([
                 {'label': 'Compare genre box office', 'value': 'genres'}
             ],
             value='total',
-            style={'width': '400px', 'marginBottom': '20px'}
+            style={'width': '20%', 'marginBottom': '20px'}
         ),
 
         # Double drop down menu for selection of compare 
@@ -311,11 +311,13 @@ layout = html.Div([
                     {'label': 'Romance', 'value': 'Romance'}],
                 value=['Action'], #Default
                 multi=True, 
-                style={'width': '100%', 'marginBottom': '20px'}
+                style={'width': '20%', 'marginBottom': '20px'}
             )
         ], style={'display': 'none'}), 
         
-        dcc.Graph(id='box-office-graph')
+        dcc.Graph(
+            id='box-office-graph',
+            style={'height': '700px', 'width': '100%'})
     ], style={'width': '100%', 'padding': '20px'}),
 
 
@@ -374,7 +376,7 @@ def update_box_office_chart(select, choosen_genre):
     elif select == 'genres':
     
         if not choosen_genre:
-            return px.bar(title="Bitte wähle mindestens ein Genre aus")
+            return px.bar(title="Please select a genre to compare")
             
         return plot_genre_comp(
             dataframe_old=data_2000, 
