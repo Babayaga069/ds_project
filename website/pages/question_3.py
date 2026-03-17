@@ -243,14 +243,15 @@ fig_compare = plot_genre_comp(data_2000,data_2025,genre_list=genres)
 #define layout
 layout = html.Div([
 
+    html.H1("What are trends in the movie industry in terms of genre distribution and box office revenue from 2000 to 2025?"),
     html.H2("Context:"),
-    html.P("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." 
-    " At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, " \
-    "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. " \
-    "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."),
+    html.P("To answer this question we only considered data from the TMDB API for the times 2000-2005 and 2020-2025. " \
+    "To keep data relevant we filtered out all movies with $0 global box office revenue. " \
+    " For the financial comparison, we applied an inflation factor of 1.6 to the data from 2000-2005.    We calculated this factor using 2003 and 2023 as our " \
+    "representative base years to keep it simple. All financial data is presented in US Dollars (USD)."),
     html.H1("Pie chart with genre distribution"),
     
-    # Der Slider
+    # slider
     html.Div([
         html.Label("Choose number of Top Genres from 1 to 15, other genres will be displayed as rest"),
         dcc.Slider(
@@ -273,13 +274,11 @@ layout = html.Div([
 
     # Genre  Growth Figure
 
-    html.H1("Relativ Genre Growth between both Timeframes"),
+    html.H2("Relativ Genre Growth"),
 
     html.Div([
         dcc.Graph(figure=fig_growth)  
     ], style={'width': '50%', 'marginTop': '50px'}),
-
-    html.H1("Box office Comparison"),
 
     html.Div([
         html.H2("Box Office Analyse", style={'marginTop': '50px'}),
@@ -317,16 +316,11 @@ layout = html.Div([
         
         dcc.Graph(
             id='box-office-graph',
-            style={'height': '700px', 'width': '100%'})
-    ], style={'width': '100%', 'padding': '20px'}),
+            style={'height': '700px', 'width': '200%'})
+    ], style={'width': '150%', 'padding': '20px'}),
 
 
-
-    html.H1("Take Away:"),
-    html.P("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." 
-    " At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, " \
-    "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea " \
-    "rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."),
+    html.P(""),
 
         
 
