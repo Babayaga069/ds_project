@@ -23,7 +23,7 @@
 - 6. How does the financial and critical success of movie sequels between 2010 and 2024 compare to their original films across franchises?
 
 #### Tom
-- 7. How does film genre, along with production budget, influence the likelihood of receiving an Academy Award nomination or win?
+- 7. How does film genre, along with production budget, influence the likelihood of receiving an Academy Award nomination?
 
 #### Tom
 - 8. How does receiving an Academy Award nomination or win influence a film’s box office revenue?
