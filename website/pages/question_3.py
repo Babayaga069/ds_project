@@ -10,7 +10,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 # register as new page
-dash.register_page(__name__, name='Question 3:')
+dash.register_page(__name__, name='Question: 3')
 
 data_2000 = pd.read_csv('pages/q3/data_2000_2005.csv')
 data_2025 = pd.read_csv('pages/q3/data_2020_2025.csv')
@@ -33,6 +33,25 @@ def pie_chart(dataframe,columname="genres",topgenres=5,filter_zero=True,year="")
     """
     Shows genre distributuion for x amount of genres and sums up the rest
     """
+    genre_color={
+    'Drama': '#8dd3c7',
+    'Comedy': '#ffffb3',
+    'Romance': '#bebada',
+    'Thriller': '#fb8072',
+    'Action': '#80b1d3',
+    'Crime': '#fdb462',
+    'Adventure': '#b3de69',
+    'Family': '#fccde5',
+    'Horror': '#d9d9d9',
+    'Mystery': '#bc80bd',
+    'Fantasy': '#ccebc5',
+    'Rest': '#e0e0e0',           
+    'Science Fiction': '#a6cee3', 
+    'Animation': '#ff9f9b',      
+    'History': '#d4a6c8',        
+    'Music': '#8c96c6',           
+    'Documentary': '#ffd92f'   
+       }   
     #filter out movies with no box office 
     if filter_zero:
         if 'box_office_revenue' in dataframe.columns:
@@ -65,7 +84,8 @@ def pie_chart(dataframe,columname="genres",topgenres=5,filter_zero=True,year="")
         values=plot_data.values,          
         names=plot_data.index,            
         title=titel,                      
-        color_discrete_sequence=px.colors.qualitative.Set3 
+        color= plot_data.index,
+        color_discrete_map=genre_color
     )
 
     
