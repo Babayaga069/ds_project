@@ -104,11 +104,11 @@ figure_bar_count_fantasy, figure_bar_sucess_fantasy = result_barcharts(livedata_
 
 
 layout = html.Div([
+    html.H1(" How does sticking to typical genre plots lead to greater box office success for fantasy and horror movies(From 2000 to 2025)?"),
     html.H2("Context:"),
-    html.P("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." 
-    " At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, " \
-    "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. " \
-    "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."),
+    html.P("To answer this question, we collected our main movie data from TMDB and plot information from the OMDB API. Afterwards, " \
+    "we analyzed the plot column for all horror and fantasy movies from 2000 to 2025. We extracted keywords using KeyBERT and selected the 50 most " \
+    "frequent ones per genre, as seen in the word cloud. Finally, we matched these keywords with the movie plot descriptions to evaluate if a movie uses typical storyline elements."),
     html.H2("Choose for which genre you want to see wordcloud", style = {'textAlign' : 'left'}),
 
     dcc.RadioItems(
@@ -130,7 +130,7 @@ layout = html.Div([
         )
     ]),
 
-    html.H3("Choose genre to analyse"),
+    html.H2("Choose genre to analyse"),
     dcc.RadioItems(
         id="genre-selection",
         options=[
@@ -185,11 +185,7 @@ layout = html.Div([
             )
         ])
     ),
-    html.H1("Take Away:"),
-    html.P("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua." 
-    " At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, " \
-    "consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea " \
-    "rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."),
+  
 
 
     ])

@@ -5,7 +5,7 @@ from dash import Dash, html, dcc
 app = Dash(__name__, use_pages=True)
 server = app.server
 app.layout = html.Div([
-    html.H1("Main page Data Sciene Project"),
+    html.H1("Data Sciene Project by Group 13"),
     
     # Navigation menu
     html.Div([
