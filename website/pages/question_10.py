@@ -42,7 +42,7 @@ def boxplot(dataframe, column_box_office, genre):
         x = "Used_Plotphrases",
         y = column_box_office,
         color = "Used_Plotphrases",
-        color_discrete_map = {False: '#ff9999', True: '#66b3ff'},
+        color_discrete_map = {"False": '#ff9999', "True": '#66b3ff'},
         category_orders= {"Used_Plotphrases": ["True","False"]}
     )
     figure.update_layout(
