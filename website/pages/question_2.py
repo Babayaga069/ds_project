@@ -13,7 +13,7 @@ import ast
 # register as new page
 dash.register_page(__name__, name="question 2")
 
-csv = pd.read_csv('pages\csv\q2\details_anime_movies_2000.csv')
+csv = pd.read_csv('pages\q2\details_anime_movies_2000.csv')
 
 # helper function
 def exploding_genre(data):
