@@ -16,7 +16,7 @@ df["release_date"] = pd.to_datetime(df["release_date"], errors="coerce")
 df["release_year"] = df["release_date"].dt.year
 df_clean = df.dropna(subset=["avg_trend_before", "avg_trend_after"]).copy()
 
-# Non-dynamic figure: top 10 movies by pre-release search interest
+# static
 top10_pre = df_clean.sort_values("avg_trend_before", ascending=False).head(10)
 fig_top10_pre = px.bar(
     top10_pre,
@@ -28,7 +28,7 @@ fig_top10_pre = px.bar(
 )
 fig_top10_pre.update_layout(xaxis_tickangle=-45)
 
-# Dynamic figure: scatter plot with selectable y-metric
+# Dynamic 
 def scatter_figure(y_metric):
     fig = px.scatter(
         df_clean,
