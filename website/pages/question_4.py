@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 import ast
 
 # register as new page
-dash.register_page(__name__,name ="question 4: ...")
+dash.register_page(__name__,name ="Question 4")
 
 csv =pd.read_csv('pages\q4\director_list.csv')
 
@@ -139,10 +139,10 @@ def popularity_scatter(csv):
         x='hist_total_votes',
         y ='new_votes',
         color='director',
-        title='director popularity vs audience engagement with latest movie',
+        title='Director Popularity vs Audience Engagement with latest Movie',
         labels={
-            'hist_total_votes': 'total imdb votes',
-            'new_votes' : 'new imdb votes'        
+            'hist_total_votes': 'Total IMDb Votes across all Movies per Director',
+            'new_votes' : 'Newest Movie IMDb Votes'        
         },
         hover_name='director'
     )
@@ -150,6 +150,7 @@ def popularity_scatter(csv):
     # Add regression line
     fig.add_traces(px.line(data, x='hist_total_votes', y='trendline').data)
     return fig
+
 
 def load_and_clean_director_data(director_ids):
 
@@ -182,13 +183,20 @@ def plot_director_careers(director_ids):
             x=df['release_year'],
             y=df['avg_score'],
             mode='lines+markers',
-            name=data['director'][director_id]
+            name=data['director'][director_id],
+            text=df['title'],  # assuming titles exist
+            hovertemplate=
+                '<b>%{text}</b><br>' +   # movie title
+                'Director: ' + data['director'][director_id] + '<br>' +
+                'Year: %{x}<br>' +
+                'Score: %{y}<br>' +
+                '<extra></extra>'
         ))
 
     fig.update_layout(
-        title='director career critical performance over time',
-        xaxis_title = 'release year',
-        yaxis_title  = 'average score'
+        title='Director Career Critical Performance over Time',
+        xaxis_title = 'Release Year',
+        yaxis_title  = 'Average Score'
     )    
     
     return fig
@@ -197,32 +205,26 @@ def plot_director_careers(director_ids):
 
 
     
-def load_budget_revenue_data(director_ids):
+def load_budget_revenue_data(director_id):
     data = loading_data(csv)
 
-    dfs = []
+    df = pd.read_csv(f"pages\q4\director_{director_id}.csv")
 
-    for i in director_ids:
-        df = pd.read_csv(f"pages\q4\director_{i}.csv")
+    df['budget'] = pd.to_numeric(df['budget'], errors='coerce')
+    df['revenue'] = pd.to_numeric(df['revenue'], errors='coerce')
 
-        df['budget'] = pd.to_numeric(df['budget'], errors='coerce')
-        df['revenue'] = pd.to_numeric(df['revenue'], errors='coerce')
+    df = df.dropna(subset=['budget', 'revenue'])
 
-        df = df.dropna(subset=['budget', 'revenue'])
+    df['roi'] = df['revenue']/df['budget']
+    df['director_id'] = director_id
+    df['name'] = data['director'][director_id]
+    df['title'] = df['title']
 
-        df['roi'] = df['revenue']/df['budget']
-        df['director_id'] = i
-        df['name'] = data['director'][i]
+    return df
 
-        dfs.append(df)
+def plot_budget_vs_revenue(director_id):
     
-    if not dfs:
-        return pd.DataFrame()
-    
-    return pd.concat(dfs, ignore_index=True)
-
-def plot_budget_vs_revenue(director_ids):
-    df = load_budget_revenue_data(director_ids)
+    df = load_budget_revenue_data(director_id)
 
     if df.empty:
         return {}
@@ -231,17 +233,16 @@ def plot_budget_vs_revenue(director_ids):
         x='budget',
         y='revenue',
         color='roi',
-        symbol='name',
-        hover_name='name',
+        hover_name='title',
         log_x=True,
         log_y=True,
-        title='budget vs revenue (roi colored)',
+        title='Budget vs Revenue (ROI colored)',
         labels={
-            'budget': 'budget(log scale)',
-            'revenue' : 'revenue (log scale)',
+            'budget': 'Budget (log scale)',
+            'revenue' : 'Revenue (log scale)',
             'roi' : 'ROI'
         },
-        color_continuous_scale='Viridis'
+        color_continuous_scale='RdYlGn'
     )
     return fig
 
@@ -254,9 +255,14 @@ layout = html.Div([
 
     html.H1("How does the historical success over the last 30-40 years of the 10 most popular active directors influence the financial and critical success of their new movie releases?"),
     html.H2("Context"),
-    html.P(""),
+    html.P("The 10 most popular directors have built a strong reputation over the last 40 years, through critically acclaimed and financially successfull movies. \
+    In this analysis we compare the past performances of directors by looking at all their movies and compare it with their latest movie release. \
+    Using the financial success, critical success, popurality "),
 
-    html.H1("Historical data vs newest movie data per director"),
+    html.H2("Historical Data vs Newest Movie Data per Director"),
+    html.P('The following graphs all show the performance of all previous movies and their performances of a director, compared to the newest movie. \
+    It compares the Return of Invest for financial success, the rating scores achieved for the critical success and the amount of IMDb votes for general popularity of each director.'),
+
 
     html.Div([
         dcc.Graph(figure=financial)
@@ -272,7 +278,7 @@ layout = html.Div([
 
 
     html.Div([
-        html.H2('plot', style={'marginTop': '50px'}),
+        html.H2('Director Performance Timeline', style={'marginTop': '50px'}),
         dcc.Dropdown(
             id='director1-dropdown',
             options=[
@@ -287,22 +293,25 @@ layout = html.Div([
     ]),
 
     html.Div([
-        html.H2('plot', style={'marginTop': '50px'}),
+        html.H2('Return of Invest Analysis per Director', style={'marginTop': '50px'}),
         dcc.Dropdown(
             id='director2-dropdown',
             options=[
                 {'label': csv['name'][i], 'value': i}
                 for i in range(len(csv))
             ],
-            value=[0],      #default selection
-            multi=True      # allows multiple selection
+            value=0,      #default selection
+            multi=False      # allows multiple selection
         ),
         dcc.Graph(id='budget-revenue-plot')
 
     ]),
 
-
-    html.P("")
+    html.H1('Take Away'),
+    html.P("Generally speaking it's visible that there is a modest relationship between historical success and new release performance, although it's stranger for critical scores and audience engangement than for financial returns \
+    With the critical success the relationship between historical performance and newest movie performance is clear, that directors with consistently high historical average scores tend to maintain strong critical scores. \
+    It's similar wit the audience engagement as well, especially with historically popular directors like Steven Spielberg or Christopher Nolan. The relationship is less seen with financial success. \
+    It's safe to say that historical success provides some predictive signal, particularly for critical reception and audience engagement, but is a weak predictor of financial outcomes, where external factors (marketing, genre, timing) introduce substantial variability.")
 ])
 
 
@@ -319,7 +328,5 @@ def update_career_plot(selected_directors):
     Output('budget-revenue-plot', 'figure'),
     Input('director2-dropdown', 'value')
 )
-def update_career_plot(selected_directors):
-    if not selected_directors:
-        return {}
-    return plot_budget_vs_revenue(selected_directors)
+def update_career_plot(selected_director):
+    return plot_budget_vs_revenue(selected_director)

@@ -85,7 +85,7 @@ def loading_data(data,studio_amount = 10):
 def runtime_scatter_plot(csv):
     data = loading_data(csv)
     fig = px.scatter(data, x='runtime', y='avg_score',
-                     title='runtime vs rating')
+                     title='Ratings across Runtimes ')
     return fig
 
 def genre_bar_chart_rating(csv):
@@ -103,8 +103,8 @@ def genre_bar_chart_rating(csv):
         genre_series,
         x='genres',
         y='avg_score',
-        title='average rating by genre',
-        labels={'genres': 'Genre', 'avg_score': 'Average rating'}
+        title='Average Ratings by Genres',
+        labels={'genres': 'Genre', 'avg_score': 'Average Rating'}
     )
 
     return fig
@@ -117,7 +117,7 @@ def ratings_over_time_plot(csv):
         year_means,
         x='release_year',
         y='avg_score',
-        title='anime movie ratings over the years',
+        title='Ratings across Release Years',
         labels={
             'release_year' : 'Release Year',
             'avg_score' : 'Average Rating'
@@ -141,10 +141,10 @@ def ratings_over_top_studios(csv, studios_amount = 10):
         studio_series,
         x='production_studios',
         y='avg_score',
-        title='average scores across production studios',
+        title='Average Scores across Production Studios',
         labels={
-            'production_studios': 'Production studios',
-            'avg_score': 'average rating'
+            'production_studios': 'Production Studios',
+            'avg_score': 'Average Rating'
         }
     )
     return fig
@@ -164,17 +164,21 @@ layout = html.Div([
     html.P("This analysis explores the key factors that influence the critical success of anime movies over the past 26 years." \
             "We used an average rating per movie, consisting of Metacritic, Rotten Tomatoes, IMDb and TMDb scores (as available), as a measure of critical success. " \
             "By examining trends across production studios, release years, runtimes, and genres, the goal is to identify patterns that explain why certain movies perform better than others."),
-    html.H1("Ratings across Ratings and Release Years"),
+    html.H2("Ratings across Ratings and Release Years"),
 
     html.Div([
         dcc.Graph(figure=runtime_ratings, style={'width': '50%'}),
         dcc.Graph(figure=release_year_ratings, style={'width': '50%'})
     ], style={'display': 'flex', 'gap':'20px'}),
 
-
-    html.H1("Ratings across Production Studios and Genres"),
     html.Div([
-        html.H1("Top Studio Ratings"),
+        dcc.Graph(figure=genre_ratings)
+    ], style={'width': '100%', 'display' :'inline-block'}),
+
+    html.H2("Ratings across Production Studios and Genres"),
+    html.Div([
+        html.H3("Top Studio Ratings"),
+        html.P('The Studios are sorted by the amount of Anime Movies they have worked in. The higher the slider, the less known the studios shown.'), 
         dcc.Slider(
             id='studio-slider',
             min=0,
@@ -186,12 +190,11 @@ layout = html.Div([
         dcc.Graph(id='studio-bar-chart')
     ]),
 
-        html.Div([
-        dcc.Graph(figure=genre_ratings)
-    ], style={'width': '100%', 'display' :'inline-block'}),
-
     html.H1("Take Away"),
-    html.P("")
+    html.P("The data suggests that higher-rated anime movies are most strongly associated with recent release years.\
+            Further emotionally driven genres like drama, music and romance perform better than spectacular genres, like action, adventure or horror movies, \
+            while runtimes mostly cluster around 100–120 minutes and exceptions having higher variability with higher and lower ratings with shorter or longer runtimes.\
+            The top production studios further enhance overall quality, with most of the studios that have lots of titles, also performing better.")
 ])
 
 # CALLBACKS
