@@ -220,6 +220,10 @@ layout = html.Div([
             )
         ])
     ),
+     html.H2("Take Away"),
+    html.P(
+        "Higher production budgets are positively associated with higher box office revenue. The relationship is strong but not perfectly uniform, indicating that while budget is an important predictor of financial performance, its effect varies across genres and time periods and does not fully explain revenue outcomes."
+    )
 
     
 ])
@@ -249,6 +253,7 @@ def run_analysis(n_clicks, chosen_genre, chosen_period):
         plot_title="Production Budget and Box Office Revenue",
         x_label="Log Production Budget",
         y_label="Log Box Office Revenue"
-    )
+    ),
+   
 
     return figure_scatter
