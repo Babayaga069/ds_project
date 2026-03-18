@@ -1,0 +1,4 @@
+id,director_id,title,budget,revenue,release_year,avg_score,imdb_vote_count
+0,5,Nomadland,5000000,39458207,2021,8.12,216384
+1,5,Eternals,200000000,402064899,2021,5.72,423444
+2,5,Hamnet,35000000,93400000,2025,8.23,27462
