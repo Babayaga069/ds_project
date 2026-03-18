@@ -59,7 +59,14 @@ layout = html.Div([
     dcc.Graph(id="dynamic-scatter", figure=scatter_figure("revenue")),
 
     html.H3("Top 10 Movies by Pre-Release Interest"),
-    dcc.Graph(figure=fig_top10_pre)
+    dcc.Graph(figure=fig_top10_pre),
+
+    html.H2("Take Away"),
+    html.P(
+        "Movies with higher pre-release search interest generally perform better in revenue "
+        "and ROI, but the correlation with critical ratings is weaker. Pre-release hype is a "
+        "strong indicator of financial success, though not a guarantee of high audience scores."
+    )
 ])
 
 @callback(
