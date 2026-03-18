@@ -161,7 +161,9 @@ layout = html.Div([
 
     html.H1("Which combination of production studio, genre, runtime and release year best explains rating-based movie success  for anime movies in the last 26 years?"),
     html.H2("Context"),
-    html.P("This is a subheading"),
+    html.P("This analysis explores the key factors that influence the critical success of anime movies over the past 26 years." \
+            "We used an average rating per movie, consisting of Metacritic, Rotten Tomatoes, IMDb and TMDb scores (as available), as a measure of critical success. " \
+            "By examining trends across production studios, release years, runtimes, and genres, the goal is to identify patterns that explain why certain movies perform better than others."),
     html.H1("Ratings across Ratings and Release Years"),
 
     html.Div([
