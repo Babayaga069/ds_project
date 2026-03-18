@@ -168,7 +168,7 @@ layout = html.Div([
         "in order to compare how the results change for films with more Oscar nominations."
     ),
     html.H2("Oscar nomination probability across genres and budget groups", style={"textAlign": "left"}),
-    
+
     html.Label("Choose minimum number of Oscar nominations"),
     dcc.Slider(
         id="threshold-slider",
@@ -209,6 +209,10 @@ layout = html.Div([
         id="heatmap-plot",
         figure=figure_heatmap_initial
     ),
+    html.H2("Take Away"),
+    html.P(
+        "Oscar nomination rates differ substantially across film genres and budget groups. In general, films with higher production budgets are more likely to receive an Oscar nomination, but this relationship varies by genre. Genres such as history, drama, and animation tend to show higher nomination probabilities, whereas horror, thriller, and crime films are nominated less frequently overall. These results suggest that both genre and budget are associated with Oscar nomination likelihood."
+    )
 ])
 
 
