@@ -19,17 +19,12 @@ originals = df[df["part"] == 0].copy()
 
 # helper
 def performance_boxplot(originals, sequels):
-    fig = make_subplots(rows=1, cols=3, subplot_titles=["Revenue", "ROI", "Rating"])
-
-    fig.add_trace(go.Box(y=originals["revenue"], name="Original"), row=1, col=1)
-    fig.add_trace(go.Box(y=sequels["revenue"], name="Sequel"), row=1, col=1)
-
-    fig.add_trace(go.Box(y=originals["roi"], name="Original"), row=1, col=2)
-    fig.add_trace(go.Box(y=sequels["roi"], name="Sequel"), row=1, col=2)
-
-    fig.add_trace(go.Box(y=originals["rating"], name="Original"), row=1, col=3)
-    fig.add_trace(go.Box(y=sequels["rating"], name="Sequel"), row=1, col=3)
-
+    metrics = {"revenue": "Revenue ($)", "roi": "Return on Investment", "rating": "Audience Rating"}
+    fig = go.Figure()
+    for col, label in metrics.items():
+        fig.add_trace(go.Box(y=originals[col], name=f"Original – {label}", boxmean=True))
+        fig.add_trace(go.Box(y=sequels[col], name=f"Sequel – {label}", boxmean=True))
+    fig.update_layout(title="Original vs Sequel: Financial and Critical Performance", yaxis_title="Value", showlegend=False)
     return fig
 
 def performance_by_part(sequels, max_part):
