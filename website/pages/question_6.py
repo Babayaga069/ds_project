@@ -10,7 +10,7 @@ dash.register_page(
 )
 
 # Data
-df = pd.read_csv("pages/Q6.csv")
+df = pd.read_csv("pages/q6/Q6.csv")
 df["release_date"] = pd.to_datetime(df["release_date"], errors="coerce")
 df["release_year"] = df["release_date"].dt.year
 
