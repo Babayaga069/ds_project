@@ -4,7 +4,7 @@
 - 1. How strongly does production budget predict box office revenue across different genres and release periods?
 
 #### Frotan
-- 2. Which combination of production budget, genre, runtime and release year best explains financial and rating-based movie success for anime movies in the last 26 years?
+- 2. Which combination of production company, genre, runtime and release year best explains financial and rating-based movie success for anime movies in the last 26 years?
 
 #### Jonas
 - 3. How have the financial performance and audience ratings of different movie genres evolved over the past 20 years?
@@ -12,9 +12,7 @@
     - 3.2 Wie hat sich der finanzielle Erfolg der einzelnen Genres in den letzten X Jahren verändert.
 
 #### Frotan
-- 4. How does the historical success of directors influence the financial and critical success of new movie releases?
-    - last 30-40 years
-    - 10 most popular aktiv directors
+- 4. How does the historical success over the last 30-40 years of the 10 most popular active directors influence the financial and critical success of new movie releases?
 
 #### Frotan
 - 5. What collaboration networks emerge between actors and directors, and how do recurring collaborations influence movie success?
