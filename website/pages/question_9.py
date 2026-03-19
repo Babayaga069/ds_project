@@ -41,7 +41,7 @@ def scatter_figure(y_metric):
     return fig
 
 layout = html.Div([
-    html.H1("How does pre- and post-release Google search interest relate to the financial and critical success of movies released between 2010 and 2024?"),
+    html.H1("How does pre-release Google search interest relate to the financial and critical success of movies released between 2010 and 2024?"),
     html.H2("Pre-Release Search Interest Analysis"),
 
     html.Label("Select Metric for Y-axis"),
