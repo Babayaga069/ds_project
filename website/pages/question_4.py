@@ -13,7 +13,7 @@ import ast
 # register as new page
 dash.register_page(__name__,name ="Question: 4",order=4)
 
-csv =pd.read_csv('pages\q4\director_list.csv')
+csv =pd.read_csv('pages/q4/director_list.csv')
 
 # helper function
 
