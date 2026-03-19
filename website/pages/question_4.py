@@ -25,7 +25,7 @@ def loading_data(csv):
 
     for i in range(len(data)):
 
-        df = pd.read_csv(f"pages\q4\director_{i}.csv")
+        df = pd.read_csv(f"pages/q4/director_{i}.csv")
 
         # sort movies by year
         df = df.sort_values('release_year')
@@ -157,7 +157,7 @@ def load_and_clean_director_data(director_ids):
     data = {}
 
     for i in director_ids:
-        df = pd.read_csv(f"pages\q4\director_{i}.csv")
+        df = pd.read_csv(f"pages/q4/director_{i}.csv")
 
         df = df.copy()
         df['release_year'] = pd.to_numeric(df['release_year'], errors='coerce')
@@ -208,7 +208,7 @@ def plot_director_careers(director_ids):
 def load_budget_revenue_data(director_id):
     data = loading_data(csv)
 
-    df = pd.read_csv(f"pages\q4\director_{director_id}.csv")
+    df = pd.read_csv(f"pages/q4/director_{director_id}.csv")
 
     df['budget'] = pd.to_numeric(df['budget'], errors='coerce')
     df['revenue'] = pd.to_numeric(df['revenue'], errors='coerce')
