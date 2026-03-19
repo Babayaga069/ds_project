@@ -1,7 +1,7 @@
 import dash
 from dash import html, dcc
 
-dash.register_page(__name__, name="Home")
+dash.register_page(__name__, name="Home",path="/", order=0)
 
 layout = html.Div([
     html.H1("Movie Data Science Project"),

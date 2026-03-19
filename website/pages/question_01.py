@@ -8,7 +8,7 @@ matplotlib.use('Agg')
 import plotly.express as px
 
 
-dash.register_page(__name__, name='Question:1')
+dash.register_page(__name__, name='Question: 1',order=1)
 
 livedata_q1 = pd.read_csv('pages/q1/movies_dataset.csv')
 

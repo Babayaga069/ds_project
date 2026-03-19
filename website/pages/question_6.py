@@ -6,7 +6,7 @@ from plotly.subplots import make_subplots
 
 dash.register_page(
     __name__,
-    name="Question 6: Sequel vs Original Performance"
+    name="Question: 5",order=5
 )
 
 # Data
@@ -84,6 +84,7 @@ fig_box = performance_boxplot(originals, sequels)
 
 # Layout
 layout = html.Div([
+    html.H1("How does the financial and critical success of movie sequels between 2010 and 2024 compare to their original films across franchises?"),
     html.H2("Context"),
     html.P(
         "Many successful movies become franchises and produce several sequels. "

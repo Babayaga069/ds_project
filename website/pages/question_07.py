@@ -8,7 +8,7 @@ import plotly.express as px
 
 
 
-dash.register_page(__name__, name='Question:7')
+dash.register_page(__name__, name='Question: 6',order=6)
 
 livedata_q2 = pd.read_csv('pages/q7/oscars_movies_merged.csv')
 

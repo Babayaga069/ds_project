@@ -10,7 +10,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 # register as new page
-dash.register_page(__name__, name='Question: 3')
+dash.register_page(__name__, name='Question: 3',order=3)
 
 data_2000 = pd.read_csv('pages/q3/data_2000_2005.csv')
 data_2025 = pd.read_csv('pages/q3/data_2020_2025.csv')
