@@ -185,6 +185,9 @@ layout = html.Div([
             )
         ])
     ),
+
+    html.H2("Take Away:"),
+    html.P("In the Fantasy and Horror genre, sticking to common plot phrases acts as a double edged sword. It effectively seems to raise the revenue floor of a movie, but also decreases the chance for a high revenue ceiling performance.")
   
 
 

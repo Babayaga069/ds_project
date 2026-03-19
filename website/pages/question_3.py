@@ -339,8 +339,8 @@ layout = html.Div([
             style={'height': '700px', 'width': '200%'})
     ], style={'width': '150%', 'padding': '20px'}),
 
-
-    html.P(""),
+    html.H2("Take Away:"),
+    html.P("The movie industry saw a steep revenue drop, reflecting shifts in the audience, both in how we watch movies and what genres we choose. Even though the top genres seem stable, their market share shrank, making room for a more diverse genre distribution."),
 
         
 
