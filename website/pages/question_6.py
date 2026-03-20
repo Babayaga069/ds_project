@@ -87,9 +87,13 @@ layout = html.Div([
     html.H1("How does the financial and critical success of movie sequels between 2010 and 2024 compare to their original films across franchises?"),
     html.H2("Context"),
     html.P(
-        "Many successful movies become franchises and produce several sequels. "
-        "This analysis compares financial success (box office revenue and ROI) "
-        "and critical success (ratings) between original movies and their sequels."
+        "For this analysis, we used movie data from TMDB covering films released between 2010 and 2024. "
+        "The dataset includes information on franchise structure, allowing us to distinguish between original movies "
+        "and their sequels using a 'part' indicator. In addition to this, we included key performance metrics such as "
+        "box office revenue, return on investment (ROI), and audience ratings. "
+        "After cleaning the data and removing invalid entries, we compared originals and sequels both overall and within "
+        "franchises. We also analyzed how performance changes as the number of sequels increases, measuring differences "
+        "relative to the original film to identify patterns in franchise development."
     ),
 
     html.H2("Original vs Sequel Performance"),

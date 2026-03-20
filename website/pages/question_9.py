@@ -42,8 +42,17 @@ def scatter_figure(y_metric):
 
 layout = html.Div([
     html.H1("How does pre-release Google search interest relate to the financial and critical success of movies released between 2010 and 2024?"),
-    html.H2("Pre-Release Search Interest Analysis"),
 
+    html.H2("Pre-Release Search Interest Analysis"),
+    html.H2("Context:"),
+    html.P(
+        "For this analysis, we combined movie metadata with Google search trend data to measure audience interest before a film’s release. "
+        "The dataset includes variables such as pre-release search interest (measured over the six months before release), "
+        "box office revenue, return on investment (ROI), and average user ratings. "
+        "After cleaning the data and removing missing values, we focused on understanding whether early public attention "
+        "can predict financial success and audience reception. "
+        "We compare search interest with revenue, profitability, and ratings to identify patterns between hype and actual performance."
+    ),
     html.Label("Select Metric for Y-axis"),
     dcc.Dropdown(
         id="y-metric-dropdown",
