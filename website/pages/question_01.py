@@ -8,7 +8,7 @@ matplotlib.use('Agg')
 import plotly.express as px
 
 
-dash.register_page(__name__, name='Question: 1',order=1)
+dash.register_page(__name__, name='Question: 1', order=1)
 
 livedata_q1 = pd.read_csv('pages/q1/movies_dataset.csv')
 
@@ -45,7 +45,6 @@ livedata_q1["log_budget"] = np.log(livedata_q1["budget"])
 livedata_q1["log_revenue"] = np.log(livedata_q1["revenue"])
 
 
-
 def filter_data(dataframe, chosen_genre, chosen_period):
     updated_dataframe = dataframe.copy()
 
@@ -60,7 +59,6 @@ def filter_data(dataframe, chosen_genre, chosen_period):
         ]
 
     return updated_dataframe
-
 
 
 def histogram_plot(dataframe, column_name, title, x_label):
@@ -78,7 +76,6 @@ def histogram_plot(dataframe, column_name, title, x_label):
     )
 
     return figure
-
 
 
 def scatterplot(dataframe, x_column, y_column, plot_title, x_label, y_label):
@@ -114,6 +111,90 @@ def scatterplot(dataframe, x_column, y_column, plot_title, x_label, y_label):
     return figure
 
 
+def barplot_budget_effect_period(dataframe):
+    results = []
+
+    periods = ["1990s", "2000s", "2010s", "2020-2025"]
+
+    for period in periods:
+        subset = dataframe[dataframe["release_period"].astype(str) == period]
+
+        if len(subset) > 10:
+            x = subset["log_budget"]
+            y = subset["log_revenue"]
+            slope = np.polyfit(x, y, 1)[0]
+
+            results.append({
+                "release_period": period,
+                "budget_effect": slope
+            })
+
+    result_df = pd.DataFrame(results)
+
+    figure = px.bar(
+        result_df,
+        x="release_period",
+        y="budget_effect",
+        title="Budget Effect across Release Periods",
+        labels={
+            "release_period": "Release Period",
+            "budget_effect": "Budget Effect"
+        }
+    )
+
+    figure.update_layout(
+        title_x=0.5,
+        xaxis_title="Release Period",
+        yaxis_title="Budget Effect",
+        showlegend=False
+    )
+
+    return figure
+
+
+def barplot_budget_effect_genre(dataframe):
+    df = dataframe.copy().explode("genre_list")
+
+    top_genres = df["genre_list"].value_counts().nlargest(6).index
+
+    results = []
+
+    for genre in top_genres:
+        subset = df[df["genre_list"] == genre]
+
+        if len(subset) > 10:
+            x = subset["log_budget"]
+            y = subset["log_revenue"]
+            slope = np.polyfit(x, y, 1)[0]
+
+            results.append({
+                "genre": genre,
+                "budget_effect": slope
+            })
+
+    result_df = pd.DataFrame(results)
+
+    figure = px.bar(
+        result_df,
+        x="genre",
+        y="budget_effect",
+        title="Budget Effect across Genres",
+        labels={
+            "genre": "Genre",
+            "budget_effect": "Budget Effect"
+        }
+    )
+
+    figure.update_layout(
+        title_x=0.5,
+        xaxis_title="Genre",
+        yaxis_title="Budget Effect",
+        showlegend=False
+    )
+
+    return figure
+
+
 # initial values
 initial_genre = "All Genres"
 initial_period = "All Periods"
@@ -143,6 +224,9 @@ figure_scatter_initial = scatterplot(
     y_label="Log Box Office Revenue"
 )
 
+figure_bar_period_initial = barplot_budget_effect_period(livedata_q1)
+figure_bar_genre_initial = barplot_budget_effect_genre(livedata_q1)
+
 all_genres = sorted({genre for genres in livedata_q1["genre_list"] for genre in genres})
 
 genre_options = [{"label": "All Genres", "value": "All Genres"}] + [
@@ -163,12 +247,12 @@ layout = html.Div([
     html.H1("How strongly does production budget predict box office revenue across different genres and release periods?"),
     html.H2("Context:"),
     html.P(
-    "To answer this question, we collected movie data from the TMDB API for films released between 1990 and 2025. "
-    "We focused on key variables such as production budget, box office revenue, genres, and release dates. "
-    "After cleaning the dataset, we restricted the analysis to movies with valid budget and revenue values. "
-    "We then applied a logarithmic transformation to reduce skewness in the revenue distribution. "
-    "Finally, we analyzed the relationship between production budget and box office revenue overall, "
-    "as well as across different genres and release periods."
+        "To answer this question, we collected movie data from the TMDB API for films released between 1990 and 2025. "
+        "We focused on key variables such as production budget, box office revenue, genres, and release dates. "
+        "After cleaning the dataset, we restricted the analysis to movies with valid budget and revenue values. "
+        "We then applied a logarithmic transformation to reduce skewness in the revenue distribution. "
+        "Finally, we analyzed the relationship between production budget and box office revenue overall, "
+        "as well as across different genres and release periods."
     ),
 
     html.H2("Revenue distribution without log transformation", style={"textAlign": "left"}),
@@ -220,12 +304,25 @@ layout = html.Div([
             )
         ])
     ),
-     html.H2("Take Away"),
-    html.P(
-        "Higher production budgets are positively associated with higher box office revenue. The relationship is strong but not perfectly uniform, indicating that while budget is an important predictor of financial performance, its effect varies across genres and time periods and does not fully explain revenue outcomes."
-    )
 
-    
+    html.H2("Budget Effect across Release Periods", style={"textAlign": "left"}),
+    dcc.Graph(
+        id="bar-period",
+        figure=figure_bar_period_initial
+    ),
+
+    html.H2("Budget Effect across Genres", style={"textAlign": "left"}),
+    dcc.Graph(
+        id="bar-genre",
+        figure=figure_bar_genre_initial
+    ),
+
+    html.H2("Take Away"),
+    html.P(
+        "Higher production budgets are positively associated with higher box office revenue. "
+        "The relationship is consistent but not perfectly uniform, indicating that while budget is an important predictor of financial performance, "
+        "its effect varies across genres and time periods and does not fully explain revenue outcomes."
+    )
 ])
 
 
@@ -236,7 +333,6 @@ layout = html.Div([
     State("period-selection", "value"),
     prevent_initial_call=True
 )
-
 def run_analysis(n_clicks, chosen_genre, chosen_period):
     if n_clicks == 0 or n_clicks is None:
         return dash.no_update
@@ -253,7 +349,6 @@ def run_analysis(n_clicks, chosen_genre, chosen_period):
         plot_title="Production Budget and Box Office Revenue",
         x_label="Log Production Budget",
         y_label="Log Box Office Revenue"
-    ),
-   
+    )
 
     return figure_scatter

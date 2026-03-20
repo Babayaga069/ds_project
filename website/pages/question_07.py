@@ -1,5 +1,5 @@
 import dash
-from dash import html, dcc, callback, Input, Output, State
+from dash import html, dcc, callback, Input, Output
 import pandas as pd
 import ast
 import matplotlib
@@ -7,20 +7,16 @@ matplotlib.use('Agg')
 import plotly.express as px
 
 
-
 dash.register_page(__name__, name='Question: 6',order=6)
 
 livedata_q2 = pd.read_csv('pages/q7/oscars_movies_merged.csv')
 
-# convert stored genre strings into Python lists
 livedata_q2["genre_list"] = livedata_q2["genre_list"].apply(
     lambda x: ast.literal_eval(x) if pd.notna(x) else []
 )
 
-# create budget groups
 livedata_q2["budget_group"] = pd.qcut(livedata_q2["budget"], 5)
 
-# create genre-level dataset
 data_genres_cached = livedata_q2.explode("genre_list").copy()
 data_genres_cached = data_genres_cached.rename(columns={"genre_list": "genre"})
 
@@ -150,7 +146,6 @@ def heatmap_plot(dataframe):
     return figure
 
 
-# initial values
 initial_threshold = 1
 
 figure_genre_initial = genre_barchart(data_genres_cached, threshold=initial_threshold)
@@ -159,7 +154,7 @@ figure_heatmap_initial = heatmap_plot(data_genres_cached)
 
 
 layout = html.Div([
-    html.H1("How does film genre, along with production budget, influence the likelihood of receiving an Academy Award nomination?"),
+    html.H1("How does movie genre, along with production budget, influence the likelihood of receiving an Academy Award nomination?"),
     html.H2("Context:"),
     html.P(
         "To answer this question, we combined movie data with Oscar nomination information and focused on film genre, production budget, "
@@ -177,13 +172,6 @@ layout = html.Div([
         step=1,
         value=1,
         marks={i: str(i) for i in range(1, 15)},
-    ),
-
-    html.Button(
-        "Update Values",
-        id="start-button",
-        n_clicks=0,
-        style={"display": "block", "marginBottom": "20px", "marginTop": "20px", "padding": "10px", "fontSize": "16px"}
     ),
 
     dcc.Loading(
@@ -219,18 +207,9 @@ layout = html.Div([
 @callback(
     Output("genre-barplot", "figure"),
     Output("budget-barplot", "figure"),
-
-    Input("start-button", "n_clicks"),
-
-    State("threshold-slider", "value"),
-
-    prevent_initial_call=True
+    Input("threshold-slider", "value")
 )
-def run_analysis(n_clicks, chosen_threshold):
-
-    if n_clicks == 0 or n_clicks is None:
-        return dash.no_update, dash.no_update
-
+def run_analysis(chosen_threshold):
     figure_genre = genre_barchart(data_genres_cached, threshold=chosen_threshold)
     figure_budget = budget_barchart(livedata_q2, threshold=chosen_threshold)
 
