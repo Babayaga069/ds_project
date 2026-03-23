@@ -3,32 +3,30 @@ from dash import html, dcc, callback, Input, Output, State
 import pandas as pd
 import numpy as np
 import ast
-import matplotlib
-matplotlib.use('Agg')
 import plotly.express as px
 
-
+#register as new page
 dash.register_page(__name__, name='Question: 1', order=1)
 
 livedata_q1 = pd.read_csv('pages/q1/movies_dataset.csv')
 
 
-# keep only relevant columns
+#keep only relevant columns
 keep_columns = ["id", "title", "release_date", "budget", "revenue", "genres"]
 livedata_q1 = livedata_q1[keep_columns].copy()
 
-# technical cleaning
+#technical cleaning
 livedata_q1["release_date"] = pd.to_datetime(livedata_q1["release_date"], errors="coerce")
 livedata_q1["release_year"] = livedata_q1["release_date"].dt.year
 livedata_q1["budget"] = pd.to_numeric(livedata_q1["budget"], errors="coerce")
 livedata_q1["revenue"] = pd.to_numeric(livedata_q1["revenue"], errors="coerce")
 
-# parse stored genre strings safely
+#parse stored genre strings safely
 livedata_q1["genre_list"] = livedata_q1["genres"].apply(
     lambda x: ast.literal_eval(x) if isinstance(x, str) else x
 )
 
-# create release period categories
+#create release period categories
 period_bins = [1989, 1999, 2009, 2019, 2025]
 period_labels = ["1990s", "2000s", "2010s", "2020-2025"]
 livedata_q1["release_period"] = pd.cut(
@@ -37,14 +35,14 @@ livedata_q1["release_period"] = pd.cut(
     labels=period_labels
 )
 
-# keep only movies with positive budget and revenue
+#keep only movies with positive budget and revenue
 livedata_q1 = livedata_q1[(livedata_q1["budget"] > 0) & (livedata_q1["revenue"] > 0)].copy()
 
 # create log variables
 livedata_q1["log_budget"] = np.log(livedata_q1["budget"])
 livedata_q1["log_revenue"] = np.log(livedata_q1["revenue"])
 
-
+#filters dataframe by chosen genre and release period
 def filter_data(dataframe, chosen_genre, chosen_period):
     updated_dataframe = dataframe.copy()
 
@@ -60,7 +58,7 @@ def filter_data(dataframe, chosen_genre, chosen_period):
 
     return updated_dataframe
 
-
+#creates histogram plot for selected variable
 def histogram_plot(dataframe, column_name, title, x_label):
     figure = px.histogram(
         dataframe,
@@ -77,7 +75,7 @@ def histogram_plot(dataframe, column_name, title, x_label):
 
     return figure
 
-
+#creates scatterplot and adds regression line
 def scatterplot(dataframe, x_column, y_column, plot_title, x_label, y_label):
     figure = px.scatter(
         dataframe,
@@ -110,7 +108,7 @@ def scatterplot(dataframe, x_column, y_column, plot_title, x_label, y_label):
 
     return figure
 
-
+#shows budget effect across different release periods
 def barplot_budget_effect_period(dataframe):
     results = []
 
@@ -151,7 +149,7 @@ def barplot_budget_effect_period(dataframe):
 
     return figure
 
-
+#shows budget effect across most common genres
 def barplot_budget_effect_genre(dataframe):
     df = dataframe.copy().explode("genre_list")
 
@@ -195,7 +193,7 @@ def barplot_budget_effect_genre(dataframe):
     return figure
 
 
-# initial values
+#initial values
 initial_genre = "All Genres"
 initial_period = "All Periods"
 
@@ -242,7 +240,7 @@ period_options = [
     {"label": "2020-2025", "value": "2020-2025"}
 ]
 
-
+#define layout
 layout = html.Div([
     html.H1("How strongly does production budget predict box office revenue across different genres and release periods?"),
     html.H2("Context:"),
@@ -325,7 +323,7 @@ layout = html.Div([
     )
 ])
 
-
+#refresh figures
 @callback(
     Output("main-plot", "figure"),
     Input("start-button", "n_clicks"),
@@ -333,6 +331,7 @@ layout = html.Div([
     State("period-selection", "value"),
     prevent_initial_call=True
 )
+
 def run_analysis(n_clicks, chosen_genre, chosen_period):
     if n_clicks == 0 or n_clicks is None:
         return dash.no_update

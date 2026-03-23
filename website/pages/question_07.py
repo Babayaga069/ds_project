@@ -2,31 +2,31 @@ import dash
 from dash import html, dcc, callback, Input, Output
 import pandas as pd
 import ast
-import matplotlib
-matplotlib.use('Agg')
 import plotly.express as px
 
-
+# register as new page
 dash.register_page(__name__, name='Question: 6',order=6)
 
 livedata_q2 = pd.read_csv('pages/q7/oscars_movies_merged.csv')
 
+# parse stored genre strings
 livedata_q2["genre_list"] = livedata_q2["genre_list"].apply(
     lambda x: ast.literal_eval(x) if pd.notna(x) else []
 )
-
+# create budget groups
 livedata_q2["budget_group"] = pd.qcut(livedata_q2["budget"], 5)
 
+# explode genre list for genre based analysis
 data_genres_cached = livedata_q2.explode("genre_list").copy()
 data_genres_cached = data_genres_cached.rename(columns={"genre_list": "genre"})
 
-
+#creates binary column for chosen nomination threshold
 def nomination_column(dataframe, threshold):
     updated_dataframe = dataframe.copy()
     updated_dataframe["nomination_binary"] = (updated_dataframe["oscar_nominations"] >= threshold).astype(int)
     return updated_dataframe
 
-
+#shows oscar nomination probability by genre
 def genre_barchart(dataframe, threshold):
     updated_dataframe = nomination_column(dataframe, threshold)
 
@@ -37,7 +37,7 @@ def genre_barchart(dataframe, threshold):
             n_movies=("nomination_binary", "count")
         )
     )
-
+    #filter out genres with too few movies
     genre_stats = genre_stats[genre_stats["n_movies"] >= 100]
     genre_stats = genre_stats.sort_values("nomination_rate", ascending=True).reset_index()
 
@@ -58,7 +58,7 @@ def genre_barchart(dataframe, threshold):
 
     return figure
 
-
+#shows oscar nomination probability by budget group
 def budget_barchart(dataframe, threshold):
     updated_dataframe = nomination_column(dataframe, threshold)
 
@@ -70,7 +70,7 @@ def budget_barchart(dataframe, threshold):
         )
         .reset_index()
     )
-
+     # create labels for budget groups
     labels = [
         f"${int(interval.left/1e6)}M–${int(interval.right/1e6)}M"
         for interval in budget_stats["budget_group"]
@@ -94,7 +94,7 @@ def budget_barchart(dataframe, threshold):
 
     return figure
 
-
+#shows oscar nomination rate by genre and budget group
 def heatmap_plot(dataframe):
     valid_genres = (
         dataframe.groupby("genre")
@@ -112,7 +112,7 @@ def heatmap_plot(dataframe):
         )
         .reset_index()
     )
-
+    # filter out genre budget groups with too few movies
     genre_budget_stats = genre_budget_stats[genre_budget_stats["n_movies"] >= 5]
 
     genre_budget_matrix = genre_budget_stats.pivot(
@@ -120,7 +120,7 @@ def heatmap_plot(dataframe):
         columns="budget_group",
         values="nomination_rate"
     )
-
+     # create labels for heatmap columns
     heatmap_columns = [
         f"${int(interval.left/1e6)}M–${int(interval.right/1e6)}M"
         for interval in genre_budget_matrix.columns
@@ -145,14 +145,14 @@ def heatmap_plot(dataframe):
 
     return figure
 
-
+# initial values
 initial_threshold = 1
 
 figure_genre_initial = genre_barchart(data_genres_cached, threshold=initial_threshold)
 figure_budget_initial = budget_barchart(livedata_q2, threshold=initial_threshold)
 figure_heatmap_initial = heatmap_plot(data_genres_cached)
 
-
+# define layout
 layout = html.Div([
     html.H1("How does movie genre, along with production budget, influence the likelihood of receiving an Academy Award nomination?"),
     html.H2("Context:"),
@@ -203,7 +203,7 @@ layout = html.Div([
     )
 ])
 
-
+#refresh figure
 @callback(
     Output("genre-barplot", "figure"),
     Output("budget-barplot", "figure"),
