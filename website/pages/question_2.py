@@ -15,7 +15,7 @@ dash.register_page(__name__, name="Question: 2", order=2)
 
 csv = pd.read_csv('pages/q2/details_anime_movies_2000.csv')
 
-# helper function
+# helper function getting dummy variables for genres
 def exploding_genre(data):
     data = data.copy()
     # converting string of a list into literal list
@@ -33,6 +33,7 @@ def exploding_genre(data):
 
     return genre_dummies
 
+# helper function getting dummy variables for studios
 def exploding_studio(data, studio_amount = 10):
     data = data.copy()
     # converting string of a list into literal list
@@ -45,6 +46,7 @@ def exploding_studio(data, studio_amount = 10):
     top_studios = studios.value_counts().head(studio_amount).index
     return top_studios
 
+# helper function loading and preprocessing data
 def loading_data(data,studio_amount = 10):
     data.copy()
     genre_dummies = exploding_genre(data)
@@ -82,12 +84,14 @@ def loading_data(data,studio_amount = 10):
 
     return data
 
+# Plot average scores across runtime in scatter plot
 def runtime_scatter_plot(csv):
     data = loading_data(csv)
     fig = px.scatter(data, x='runtime', y='avg_score',
                      title='Ratings across Runtimes ')
     return fig
 
+# Plot average scores across genres in bar chart
 def genre_bar_chart_rating(csv):
     data = loading_data(csv)
     genre_dummies = exploding_genre(csv.copy())
@@ -108,7 +112,7 @@ def genre_bar_chart_rating(csv):
     )
 
     return fig
-
+# Plot average scores over release years in graph
 def ratings_over_time_plot(csv):
     data = loading_data(csv)
     year_means = data.groupby('release_year')["avg_score"].mean().reset_index()
@@ -125,6 +129,7 @@ def ratings_over_time_plot(csv):
     )
     return fig
 
+# Plot average scores over chosen amount of production studios in bar chart
 def ratings_over_top_studios(csv, studios_amount = 10):
     data = loading_data(csv,studios_amount)
 
@@ -149,7 +154,7 @@ def ratings_over_top_studios(csv, studios_amount = 10):
     )
     return fig
 
-
+# initial values and plots
 
 runtime_ratings = runtime_scatter_plot(csv)
 genre_ratings = genre_bar_chart_rating(csv)
@@ -199,7 +204,7 @@ layout = html.Div([
 
 # CALLBACKS
 
-
+# refresh plot in case of update
 @callback(
     Output('studio-bar-chart', 'figure'),
     Input('studio-slider', 'value')
