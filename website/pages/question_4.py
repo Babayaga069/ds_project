@@ -15,11 +15,10 @@ dash.register_page(__name__,name ="Question: 4",order=4)
 
 csv =pd.read_csv('pages/q4/director_list.csv')
 
-# helper function
+# helper function loading and preprocessing data
 
 def loading_data(csv):
     data = csv.copy()
-    #print(directors.head())
 
     results = []
 
@@ -64,6 +63,7 @@ def loading_data(csv):
 
     return analysis_df
 
+# Plot newest movie's scores over historical average scores per directors in scatterplot with regression line
 def avg_score_scatter(data):
     data = loading_data(data)
     x = data['hist_avg_score']
@@ -93,6 +93,7 @@ def avg_score_scatter(data):
     fig.add_traces(px.line(data, x='hist_avg_score', y='trendline').data)
     return fig
 
+# Plot newest movie's ROI over historical average ROI per directors in scatterplot with regression line
 def financial_success_scatter(csv):
     data = loading_data(csv)
     x = data['hist_avg_roi']
@@ -122,6 +123,7 @@ def financial_success_scatter(csv):
     fig.add_traces(px.line(data, x='hist_avg_roi', y='trendline').data)
     return fig
 
+# Plot newest movie's IMDb vote count over historical total IMDb vote count per directors in scatterplot with regression line
 def popularity_scatter(csv):
     data = loading_data(csv)
     x = data['hist_total_votes']
@@ -151,7 +153,7 @@ def popularity_scatter(csv):
     fig.add_traces(px.line(data, x='hist_total_votes', y='trendline').data)
     return fig
 
-
+# helper function loading and preprocessing data for director career timeline
 def load_and_clean_director_data(director_ids):
 
     data = {}
@@ -170,6 +172,7 @@ def load_and_clean_director_data(director_ids):
 
     return data
 
+# Plotting director's movie scores across release years for chosen directors with graph
 def plot_director_careers(director_ids):
 
     data= loading_data(csv)
@@ -202,9 +205,7 @@ def plot_director_careers(director_ids):
     return fig
 
 
-
-
-    
+# helper function loading and preprocessing each movie's data for revenue over budget for chosen director
 def load_budget_revenue_data(director_id):
     data = loading_data(csv)
 
@@ -222,6 +223,7 @@ def load_budget_revenue_data(director_id):
 
     return df
 
+# Plotting movie's revenue over budget for all movies of chosen director in heat scatter plot
 def plot_budget_vs_revenue(director_id):
     
     df = load_budget_revenue_data(director_id)
@@ -246,11 +248,13 @@ def plot_budget_vs_revenue(director_id):
     )
     return fig
 
+# initial values and plots
 
 popularity = popularity_scatter(csv)
 avg_score = avg_score_scatter(csv)
 financial = financial_success_scatter(csv)
 
+# LAYOUT
 layout = html.Div([
 
     html.H1("How does the historical success over the last 30-40 years of the 10 most popular active directors influence the financial and critical success of their new movie releases?"),
@@ -314,7 +318,7 @@ layout = html.Div([
     It's safe to say that historical success provides some predictive signal, particularly for critical reception and audience engagement, but is a weak predictor of financial outcomes, where external factors (marketing, genre, timing) introduce substantial variability.")
 ])
 
-
+# updating figures
 @callback(
     Output('career-plot', 'figure'),
     Input('director1-dropdown', 'value')
