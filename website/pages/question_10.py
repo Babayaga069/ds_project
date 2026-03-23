@@ -2,11 +2,13 @@ import dash
 from dash import html, dcc, callback, Input, Output, State
 import pandas as pd
 from wordcloud import WordCloud
+import plotly.express as px
 import matplotlib
 
 matplotlib.use("Agg")
-import plotly.express as px
 
+
+#formated with blackformater
 
 dash.register_page(__name__, name="Question: 8", order=8)
 
@@ -18,6 +20,12 @@ data_horror_cached = pd.read_csv("pages/q10/horror_plotframe.csv")
 
 
 def wordmap(dataframe, title):
+    """
+    This function create a wordcloud for a dataframe 
+    dataframe: expects a dataframa with with a title and a count
+    title: title that supposed to be shown on the wordcloud
+    """
+
     frequency = dataframe.set_index("Plotphrase")["Count"].to_dict()
 
     wordmap = WordCloud(
@@ -37,6 +45,12 @@ def wordmap(dataframe, title):
 
 
 def boxplot(dataframe, column_box_office, genre):
+    """
+    Creates a boxplot boxplot for a given dataframe
+    dataframe: dataframe with movie information
+    column_box_office: Name of column in dataframe for box office
+    genre: Genre title for the figure
+    """
     figure = px.box(
         dataframe,
         x="Used_Plotphrases",
@@ -56,7 +70,9 @@ def boxplot(dataframe, column_box_office, genre):
 
 def result_barcharts(dataframe, column_box_office):
     """
-    Function that shows the the commeted line in the function above
+    Funtion that creates barcharts showing success and count of true false in dataframe
+    dataframe: dataframe with movie information
+    column_box_office: Name of column in dataframe for box office
     """
     count_data = dataframe["Used_Plotphrases"].value_counts().reset_index()
     count_data.columns = ["Used_Plotphrases", "Count"]
@@ -99,9 +115,9 @@ def result_barcharts(dataframe, column_box_office):
 
 
 # initial values
-initial_threshold = 0.6
+INTIAL_THRESHHOLD= 0.6
 livedata_fantasy["Used_Plotphrases"] = (
-    livedata_fantasy["Similarity_Score"] >= initial_threshold
+    livedata_fantasy["Similarity_Score"] >= INTIAL_THRESHHOLD
 ).map({True: "True", False: "False"})
 
 figure_wc_fantasy = wordmap(data_fantasy_cached, title="Fantasy")
@@ -116,13 +132,18 @@ figure_bar_count_fantasy, figure_bar_sucess_fantasy = result_barcharts(
 layout = html.Div(
     [
         html.H1(
-            " How does sticking to typical genre plots lead to greater box office success for fantasy and horror movies(From 2000 to 2025)?"
+            "How does sticking to typical genre plots lead to greater" 
+            "box office success for fantasy and horror movies(From 2000 to 2025)?"
         ),
         html.H2("Context:"),
         html.P(
-            "To answer this question, we collected our main movie data from TMDB and plot information from the OMDB API. Afterwards, "
-            "we analyzed the plot column for all horror and fantasy movies from 2000 to 2025. We extracted keywords using KeyBERT and selected the 50 most "
-            "frequent ones per genre, as seen in the word cloud. Finally, we matched these keywords with the movie plot descriptions to evaluate if a movie uses typical storyline elements."
+            "To answer this question, we collected our main movie data from TMDB "
+            "and plot information from the OMDB API. Afterwards, "
+            "we analyzed the plot column for all horror and fantasy movies from 2000 to 2025." \
+            " We extracted keywords using KeyBERT and selected the 50 most "
+            "frequent ones per genre, as seen in the word cloud. " \
+            "Finally, we matched these keywords with the movie plot descriptions" \
+            " to evaluate if a movie uses typical storyline elements."
         ),
         html.H2(
             "Choose for which genre you want to see wordcloud",
@@ -211,7 +232,10 @@ layout = html.Div(
         ),
         html.H2("Take Away:"),
         html.P(
-            "In the Fantasy and Horror genre, sticking to common plot phrases acts as a double edged sword. It effectively seems to raise the revenue floor of a movie, but also decreases the chance for a high revenue ceiling performance."
+            "In the Fantasy and Horror genre, " \
+            "sticking to common plot phrases acts as a double edged sword. " \
+            "It effectively seems to raise the revenue floor of a movie, " \
+            "but also decreases the chance for a high revenue ceiling performance."
         ),
     ]
 )
@@ -219,6 +243,9 @@ layout = html.Div(
 
 @callback(Output("genre-wordmap", "figure"), Input("input-selection", "value"))
 def update_wordcloud(input):
+    """
+    updating wordcloud while website is live 
+    """
     if input == "Horror":
         return wordmap(data_horror_cached, "Horror")
     elif input == "Fantasy":
@@ -235,6 +262,13 @@ def update_wordcloud(input):
     prevent_initial_call=True,
 )
 def run_analysis(n_clicks, threshold_value, choosen_genre):
+
+    """
+    Updating analysis live on website
+    n_clicks: update condition
+    threshold_value: Threshholds that gets selected for true false
+    choosen_genre: Either fantasy or horror
+    """
 
     if n_clicks == 0 or n_clicks is None:
         return dash.no_update, dash.no_update, dash.no_update

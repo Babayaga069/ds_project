@@ -2,13 +2,12 @@ import dash
 from dash import html, dcc, callback, Input, Output
 import numpy as np
 import pandas as pd
+import plotly.express as px
 
 import matplotlib
-
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import plotly.express as px
-import plotly.graph_objects as go
+
+
 
 #formated with blackformater
 
@@ -37,6 +36,11 @@ def explode_data(dataframe):
 def pie_chart(dataframe, columname="genres", topgenres=5, filter_zero=True, year=""):
     """
     Shows genre distributuion for x amount of genres and sums up the rest
+    dataframe: Movie data
+    columname: name of genre column in dataframe
+    topgenres: amout of genres shown
+    filter_zero: Want 0 box office Yes/No
+    year: Year of data
     """
     genre_color = {
         "Drama": "#8dd3c7",
@@ -108,6 +112,12 @@ def plot_growth(
 ):
     """
     Shows relativ Growth of genres from one time frame to another
+    dataframe_old: First data
+    dataframe_new: Second data
+    column: name of genre column:
+    year_old: time of first data
+    year_new: time of second data
+    filter_zero: 0 box office movies yes/no
     """
     if filter_zero:
         if "box_office_revenue" in dataframe_old.columns:
@@ -196,6 +206,13 @@ def plot_toal_boxoffice(
 ):
     """
     Compares total box_office revenue of two timeframes
+    dataframe_old: First data
+    dataframe_new: Second data
+    column: name of genre column
+    year_old: time of first data
+    year_new: time of second data
+    box_office: column name for box office
+    inflation_factor: Inflation factor 
     """
 
     total_old = (dataframe_old[box_office].sum() * inflation_factor) / 1000000000
@@ -234,6 +251,14 @@ def plot_genre_comp(
 ):
     """
     Compares The financial success of same genres in different time frames
+    dataframe_old: First data
+    dataframe_new: Second data
+    genre_list: list of genre you want to compare
+    column: name of genre column
+    year_old: time of first data
+    year_new: time of second data
+    box_office: column name for box office
+    inflation_factor: Inflation factor 
     """
 
     # split multi genre movies
@@ -290,21 +315,27 @@ fig_compare = plot_genre_comp(data_2000, data_2025, genre_list=genres)
 layout = html.Div(
     [
         html.H1(
-            "What are trends in the movie industry in terms of genre distribution and box office revenue from 2000 to 2025?"
+            "What are trends in the movie industry in terms of" 
+            "genre distribution and box office revenue from 2000 to 2025?"
         ),
         html.H2("Context:"),
         html.P(
-            "To answer this question we only considered data from the TMDB API for the times 2000-2005 and 2020-2025. "
+            "To answer this question we only considered data " \
+            "from the TMDB API for the times 2000-2005 and 2020-2025. "
             "To keep data relevant we filtered out all movies with $0 global box office revenue. "
-            " For the financial comparison, we applied an inflation factor of 1.6 to the data from 2000-2005.    We calculated this factor using 2003 and 2023 as our "
-            "representative base years to keep it simple. All financial data is presented in US Dollars (USD)."
+            " For the financial comparison, we applied an inflation factor of 1.6 " \
+            "to the data from 2000-2005. " \
+            "   We calculated this factor using 2003 and 2023 as our "
+            "representative base years to keep it simple. " \
+            "All financial data is presented in US Dollars (USD)."
         ),
         html.H1("Pie chart with genre distribution"),
         # slider
         html.Div(
             [
                 html.Label(
-                    "Choose number of Top Genres from 1 to 15, other genres will be displayed as rest"
+                    "Choose number of Top Genres from 1 to 15, " \
+                    "other genres will be displayed as rest"
                 ),
                 dcc.Slider(
                     id="top-genres-slider",
@@ -374,7 +405,11 @@ layout = html.Div(
         ),
         html.H2("Take Away:"),
         html.P(
-            "The movie industry saw a steep revenue drop, reflecting shifts in the audience, both in how we watch movies and what genres we choose. Even though the top genres seem stable, their market share shrank, making room for a more diverse genre distribution."
+            "The movie industry saw a steep revenue drop, " \
+            "reflecting shifts in the audience, " \
+            "both in how we watch movies and what genres we choose." \
+            " Even though the top genres seem stable, their market share shrank, " \
+            "making room for a more diverse genre distribution."
         ),
     ]
 )
@@ -388,6 +423,8 @@ layout = html.Div(
 def update_pie_charts(choosen_top_genres):
     """
     gets called when slider changes
+    choosen_top_genres: Number of genres to show
+
     """
     fig_pie_2000 = pie_chart(
         dataframe=data_2000,
@@ -406,10 +443,15 @@ def update_pie_charts(choosen_top_genres):
 
 
 @callback(
-    Output("genre-selection-container", "style"), Input("box-office-dropdown", "value")
+    Output("genre-selection-container", "style"),
+    Input("box-office-dropdown", "value")
 )
-def show_hide_genre_select(auswahl):
-    if auswahl == "genres":
+def show_hide_genre_select(selection):
+    """
+    Updates shown genre 
+    selection: list of selected genre 
+    """
+    if selection == "genres":
         return {"display": "block"}
     return {"display": "none"}
 
@@ -420,6 +462,12 @@ def show_hide_genre_select(auswahl):
     Input("genre-multi-select", "value"),
 )
 def update_box_office_chart(select, choosen_genre):
+    """
+    Updates box office chart on website
+    select: total or genre compare
+    choosen_genre: Genres you want to compare
+    """
+
     if select == "total":
         return plot_toal_boxoffice(data_2000, data_2025)
 
