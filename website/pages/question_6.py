@@ -52,7 +52,6 @@ def performance_by_part(sequels, max_part):
         rating_diff=("rating_diff", "mean")
     ).reset_index()
 
-    # Create figure with secondary y-axis
     fig = make_subplots(specs=[[{"secondary_y": True}]])
 
     fig.add_trace(go.Bar(
