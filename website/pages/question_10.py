@@ -12,8 +12,8 @@ matplotlib.use("Agg")
 
 dash.register_page(__name__, name="Question: 8", order=8)
 
-livedata_fantasy = pd.read_csv("pages/q10/precomputed_fantasy.csv")
-livedata_horror = pd.read_csv("pages/q10/precomputed_horror.csv")
+livedata_fantasy = pd.read_csv("pages/q10/precomputed_fantasy.csv",sep=";")
+livedata_horror = pd.read_csv("pages/q10/precomputed_horror.csv",sep=";")
 
 data_fantasy_cached = pd.read_csv("pages/q10/fantasy_plotframe.csv")
 data_horror_cached = pd.read_csv("pages/q10/horror_plotframe.csv")
