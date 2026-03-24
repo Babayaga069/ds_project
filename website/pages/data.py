@@ -7,7 +7,7 @@ matplotlib.use('Agg')
 import plotly.express as px
 
 dash.register_page(__name__, name='Data')
-#list made with help of ai
+#list made with help of LLM
 data_entries = [
     {
         "name": "title, original_title, film", 

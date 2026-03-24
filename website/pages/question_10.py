@@ -22,7 +22,7 @@ data_horror_cached = pd.read_csv("pages/q10/horror_plotframe.csv")
 def wordmap(dataframe, title):
     """
     This function create a wordcloud for a dataframe 
-    dataframe: expects a dataframa with with a title and a count
+    dataframe: expects a dataframa with with a plotphrase and a count
     title: title that supposed to be shown on the wordcloud
     """
 
